@@ -1,0 +1,336 @@
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Registro de Productos</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  	<!-- Facebook and Twitter integration -->
+	
+<script   src="https://code.jquery.com/jquery-1.11.0.js"   integrity="sha256-zgND4db0iXaO7v4CLBIYHGoIIudWI5hRMQrPB20j0Qw="   crossorigin="anonymous"></script>
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Google Webfont -->
+	<!-- Themify Icons -->
+	<link rel="stylesheet" href="css/themify-icons.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="css/bootstraplim.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Superfish -->
+	<link rel="stylesheet" href="css/superfish.css">
+	<!-- Easy Responsive Tabs -->
+	<link rel="stylesheet" href="css/easy-responsive-tabs.css">
+
+	
+
+	<!-- Theme Style -->
+	<link rel="stylesheet" href="css/styleformprod.css">
+
+	
+
+
+	</head>
+	<body class="inner-page">
+
+			<!-- START #fh5co-header -->
+			<header id="fh5co-header-section" role="header" class="" >
+				<div class="container">
+					
+					<!-- START #fh5co-logo -->
+					<h1 id="fh5co-logo" class="pull-left"></h1>
+					
+					<!-- START #fh5co-menu-wrap -->
+					<nav id="fh5co-menu-wrap" role="navigation">
+						<ul class="sf-menu" id="fh5co-primary-menu">
+							<li>
+								<a href="index.html">Principal</a>
+							</li>
+							<li class="active">
+								<a href="#" class="fh5co-sub-ddown">Menu</a>
+								 <ul class="fh5co-sub-menu">
+								 <li>
+										<a href="#" class="fh5co-sub-ddown">Clientes...</a>
+										<ul class="fh5co-sub-menu">
+											<li><a href="#">Buscar</a></li>
+											<li><a href="right-sidebar.html">Registro Clientes</a></li>
+											<li><a href="modclientes.php">Modificar / Eliminar</a></li>
+											<li><a href="listclientes.php">Lista De clientes</a></li>
+										</ul>
+									</li>
+									
+									<li>
+										<a href="#" class="fh5co-sub-ddown">Productos...</a>
+										<ul class="fh5co-sub-menu">
+											<li><a href="left-sidebar.html">Agregar</a></li>
+											<li><a href="#">Modificar / Eliminar</a></li>
+											<li><a href="#">Catalago Productos</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="elements.php">Lista de Productos</a></li>
+							<li><a href="contact.html">Lista de Clientes</a></li>
+						</ul>
+					</nav>
+					<a href="index.html" > <img src ="images/SHARP-1.png" width="90" height="70"></a></h3>
+
+				</div>
+			</header>
+			
+			
+
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+				
+				<section>
+
+  <div class="jumbotron text-center"  style="background-color: rgba(100, 100, 128, 0.5); text-align:center; margin: 0 auto; text-align: left; " > 
+  <table width="300" border="" background="" style="text-align:center; margin: 0 auto; text-align: left; ">
+  <tbody>
+    <tr>
+      <td><div ><form action="saveprod.php" method ="POST" enctype="multipart/form-data">
+    <table width="893" height="342" border="0" >
+      <tbody>
+        <tr>
+          <td width="226">&nbsp;</td>
+          <td width="270">&nbsp;</td>
+          
+                  
+	  </tr>
+        <tr>
+          <td><span class="label label-default" >Nombre</span></td>
+          <td><input id="lastname"  type="Text" maxlength="20" name="nombre" REQUIRED placeholder="..." value="" pattern="[a-zA-Z0-9 ,.']{1,11}" maxlength="15" title= "No se permiten simbolos o números negativos"></td>
+          
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+	    
+	  </tr>
+          <tr>
+          <td><span class="label label-default" >Talla</span></td>
+          <td><input id="lastname"  class="textbox" name="talla" list="listas1" placeholder="..."  type="text" required="" size="5" Title= "Talla" pattern="[A-Z]+">
+   
+	 <datalist id="listas1">
+	  <option value="S">
+	   <option value="M" >
+	   <option value="L" >
+	   <option value="XL" >
+   
+    
+    </datalist> </td>
+          
+        </tr>
+       
+  </div>
+</div>
+          
+	  </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          
+	  </tr>
+        <tr>
+          <td><span class="label label-default" >Marca</span></td>
+          <td><input id="lastname" type="Text" maxlength="20" name="marca" list="listas2" REQUIRED placeholder="Escoja Marca..." value="" pattern="[a-zA-Z0-9 ,.']{1,11}" maxlength="15" title= "No se permiten simbolos, números negativos o letras"></td>
+	  
+	  <datalist id="listas2">
+	  <option value="bmw">
+	   <option value="aion" >
+	   <option value="shark" >
+	   <option value="pilsen" >
+	   <option value="3G0" >
+	    <option value="Duchini" >
+	</tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          
+	  </tr>
+        <tr>
+          <td><span class="label label-default" >Modelo</span></td>
+          <td><input id="lastname" type="Text" maxlength="20" name="modelo" REQUIRED placeholder="Modelo del producto" value="" /></td>
+	    
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+	    
+        </tr>
+        <tr>
+ <td><span class="label label-default" >Tipo</span></td>
+          <td><input id="lastname"  class="textbox" name="tipo" list="listas3" placeholder="..."  type="text" required="" size="5" Title= "">
+   
+	 <datalist id="listas3">
+	  <option value="Abatible" >
+	   <option value="Integral" >
+	   <option value="Dual" >
+	   <option value="JET" >
+	   <option value="Modular" >
+   
+    
+    </datalist> </td>
+          
+        </tr>
+       
+  </div>
+</div>
+      
+	  <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+	    
+        </tr>
+        <tr>	
+
+
+	    
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+	    
+        </tr>
+        <tr>
+		<!--
+           <td><span class="label label-default">Cantidad</span></td>
+          <td><input id="lastname" type="Text" name="cantidad"  size="20" maxlength="20" REQUIRED placeholder="Cantidad de Productos" value="" pattern="[0-9]{1,11}" maxlength="15" title= "No se permiten simbolos, números negativos o letras"></td>
+          -->
+        </tr>
+        <tr>
+       
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          
+        </tr>
+        <tr>
+		
+		<td><span class="label label-default">Precio</span></td>
+          <td><input id="lastname" type="Text" name="precio"  size="20" maxlength="20" REQUIRED placeholder="$" value="" pattern="[0-9]{1,11}" maxlength="15" title= "No se permiten simbolos, números negativos o letras"></td>
+          
+        </tr>
+        <tr>
+       
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          
+        </tr>
+        <tr>
+          <td><span class="label label-default">Descripción de producto</span></td>
+          <td><textarea REQUIRED cols="60" rows="5" name="descrip" id="message"  placeholder="Describa el producto aqui..." onKeyDown="valida_longitud()" onKeyUp="valida_longitud()" ></textarea></td>
+             
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+            </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>
+	  
+		 <input type="submit" class="register" value="Guardar" >
+		 <input type="button" class="reset" value="Cancelar" onClick="location.href='http://localhost/sharp/display/index.html'">
+		  </td>
+        </tr>
+      </tbody>
+    </table>
+    </div></td>
+      <td><div>
+      <span class="label label-info">Imagen Seleccionada</span>
+       <output id="list" size="300"  ></output>
+       <input  id="files" type="file"  class="register" REQUIRED name="imagen" />
+    </form>  </div></td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+</section>
+
+
+</div>
+
+				<footer id="fh5co-footer">
+					<div class="container">
+						
+						<ul class="fh5co-social-icons">
+							<li><a href="#"><i class="ti-twitter-alt"></i></a></li>
+							<li><a href="#"><i class="ti-facebook"></i></a></li>
+							<li><a href="#"><i class="ti-github"></i></a></li>
+							<li><a href="#"><i class="ti-linkedin"></i></a></li>
+						</ul>
+						<p class="text-muted fh5co-no-margin-bottom text-center"><small>&copy; 2015 <a href="#">Display</a>. All rights reserved. Crafted with love <em>by</em> <a href="http://freehtml5.co" target="_blank">FREEHTML5.co</a> <br> Images by <a href="http://unsplash.com/" target="_blank">Unsplash</a></small></p>
+
+					</div>
+				</footer>
+			
+		
+			</div>
+			
+			
+		<!-- jQuery -->
+		<script src="js/jquery-1.10.2.min.js"></script>
+		<!-- jQuery Easing -->
+		<script src="js/jquery.easing.1.3.js"></script>
+		<!-- Bootstrap -->
+		<script src="js/bootstrap.js"></script>
+		<!-- Owl carousel -->
+		<script src="js/owl.carousel.min.js"></script>
+		<!-- Magnific Popup -->
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<!-- Superfish -->
+		<script src="js/hoverIntent.js"></script>
+		<script src="js/superfish.js"></script>
+		<!-- Easy Responsive Tabs -->
+		<script src="js/easyResponsiveTabs.js"></script>
+		<!-- FastClick for Mobile/Tablets -->
+		<script src="js/fastclick.js"></script>
+		<!-- Main JS -->
+		<script src="js/main.js"></script>
+
+<script src="js1/bootstrap.min.js"></script>
+<!-- esto es para mostrar la imagen escogida -->
+<script>
+              function archivo(evt) {
+                  var files = evt.target.files; // FileList object
+             
+                  // Obtenemos la imagen del campo "file".
+                  for (var i = 0, f; f = files[i]; i++) {
+                    //Solo admitimos imágenes.
+                    if (!f.type.match('image.*')) {
+                        continue;
+                    }
+             
+                    var reader = new FileReader();
+             
+                    reader.onload = (function(theFile) {
+                        return function(e) {
+                          // Insertamos la imagen
+                         document.getElementById("list").innerHTML = ['<img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
+                        };
+                    })(f);
+             
+                    reader.readAsDataURL(f);
+                  }
+              }
+             
+              document.getElementById('files').addEventListener('change', archivo, false);
+      </script>
+	</body>
+</html>
