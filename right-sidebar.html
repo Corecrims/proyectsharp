@@ -10,21 +10,7 @@
 	<title>Registro de Clientes</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<script type="text/javascript">
-<!--
-function confirmation() {
-    if(confirm(" Para confirmar su registro presione Aceptar "))
-    {
-       
-		return true;
-	}
-    
-	alert(" se ha cancelado registro !! ")
-    return false;
-}
-//-->
-</script>
- 
+	<script src="js/scripttext.js"></script>
  
 
   	<!-- Facebook and Twitter integration -->
@@ -157,20 +143,20 @@ function confirmation() {
 			
 			
 			<div class="form-control"> 
-				<label class="header">Primer Nombre <span>:</span></label>
-				<input type="text" id="firstname" name="p1nombre" placeholder="..." value="" title="Por favor ingrese su primer nombre" required="" pattern="[a-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšž]{1,40}" >
+				<label class="header">Primer Nombre *<span>:</span></label>
+				<input type="text" id="firstname" name="p1nombre" placeholder="..." value="" title="Por favor ingrese su primer nombre" required="" maxlength="40" pattern="[a-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšž]{1,40}" >
 			</div>	
 			<div class="form-control"> 
-				<label class="header">Primer Apellido <span>:</span></label>
-				<input type="text" id="lastname" name="1apellido" placeholder=".." value="" title="Por favor ingrese su primer apellido" required="" pattern="[a-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšž]{1,40}">
+				<label class="header">Primer Apellido *<span>:</span></label>
+				<input type="text" id="lastname" name="1apellido" placeholder=".." value="" title="Por favor ingrese su primer apellido" required="" maxlength="50" pattern="[a-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšž]{1,50}">
 			</div>
 			<div class="form-control"> 
-				<label class="header">Fecha Nacimiento <span>:</span></label>
+				<label class="header">Fecha Nacimiento *<span>:</span></label>
 				<input type="date" id="lastname" name="fecha" value="1900-01-01" min="1900-01-01"  max="1999-01-01" value="" size="10" pattern="[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])" ></input>
 			</div>
 			
 		<div class="form-control" >
-				<label class="header">Sexo<span>:</span></label>
+				<label class="header">Sexo *<span>:</span></label>
 				          
           <input required type = "radio" id="lastname2"
                  name = "sexo"
@@ -196,16 +182,15 @@ function confirmation() {
 			
 			
 			<div class="form-control">	
-				<label class="header">Tipo Identificacion <span>:</span></label>	
-				<input class="lastname" name="tipo" id="lastname" list="listas3" placeholder="..." value=""  type="text" required="" size="5" Title= "Seleccione un tipo de identificacion" >
+				<label class="header">Tipo Identificacion *<span>:</span></label>	
+				<select style=" background-color: rgba(41, 26, 8, 0.5); font-size: 70%;" class="lastname" name="tipo" id="lastname" value=""  required=""  Title= "Seleccione un tipo de identificacion" >
    
-  <datalist id="listas3">
-   <option value="CC">
-    <option value="ID" >
-    <option value="CE" >
+  <option value="" disabled selected>...</option>
+   <option value="CC">CC</option>
+    <option value="CE" >CE</option>
     
-    </datalist> 
-				
+  
+				</select>
 				
 			</div>
 			
@@ -221,65 +206,68 @@ function confirmation() {
 		
 			<div class="form-control"> 
 				<label class="header">Segundo nombre : <span>:</span></label>
-				<input type="text" id="middlename" name="s2nombre" placeholder="..."  value="" title="Por favor ingrese su segundo nombre"  pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{1,40}">
+				<input type="text" id="middlename" name="s2nombre" placeholder="..."  value="" title="Por favor ingrese su segundo nombre, si tiene un tercero colocarlo en este espacio"  maxlength="40" pattern="[a-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšž ]{1,40}" >
 			</div>
 			
 			<div class="form-control"> 
 				<label class="header">Segundo Apellido <span>:</span></label>
-				<input type="text" id="lastname" name="2apellido" placeholder=".."  value="" title="Por favor ingrese su segundo apellido"  pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{1,40}">
+				<input type="text" id="lastname" name="2apellido" placeholder=".."  value="" title="Por favor ingrese su segundo apellido (no obligatorio)" maxlength="50" pattern="[a-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšž ]{1,50}">
 			</div>
 			
 			
 			
 			<div class="form-control">	
 				<label class="header">Genero <span>:</span></label>	
-				<input class="lastname" name="genero" id="lastname" list="listas1" placeholder="..." value=""  type="text"  size="5" Title= "Seleccione un tipo de identificacion" >
+				<select style=" background-color: rgba(41, 26, 8, 0.5); font-size: 70%;" class="lastname" name="genero"  value=""   Title= "Seleccione tipo genero" pattern="[a-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšž]{3,11}">
    
-  <datalist id="listas1">
-   <option value="Lesbico">
-    <option value="Gay" >
-    <option value="Hetero" >
-    <option value="Bisexual" >
-    <option value="Transexual" >
-   <option value="Intersexual" >
+   <option value="" disabled selected>...</option>
+   <option value="" >    </option>
+   <option value="Lesbico"  >Lesbico</option>
+    <option value="Gay" >Gay</option>
+    <option value="Hetero" >Hetero</option>
+    <option value="Bisexual" >Bisexual</option>
+    <option value="Transexual" >Transexual</option>
+   <option value="Intersexual" >Intersexual</option>
     
-    </datalist> 
+	</select>
+    
 				
 				
 			</div>	
 			
 			<div class="form-control">	
-				<label class="header">Correo electronico <span>:</span></label>
-				<input type="email" id="email" name="correo" placeholder="Mail@example.com"  value="" title="Please enter a Valid Email Address" required="">
+				<label class="header">Correo electronico *<span>:</span></label>
+				<input type="email" id="email" name="correo" placeholder="ejemplo@sharp-cascos.com"  value="" title="Por favor ingrese un e-mail valido" required="">
 			</div>
 			
 			
 			<div class="form-control"> 
-				<label class="header">Telefono movil <span>:</span></label>
+				<label class="header">Telefono movil *<span>:</span></label>
 				  <input id="lastname" name="movil" placeholder="Ingrese Numero cel.."  value="" class="textbox" type="text" maxlength="10" pattern="[0-9]{10}" title= "No se Permiten Simbolos o Numeros negativos" required="" >
                 </div>
 			
 			<div class="form-control"> 
-				<label class="header">Numero Identificacion <span>:</span></label>
+				<label class="header">Numero Identificacion *<span>:</span></label>
 				<input type="text" id="firstname" name="identificacion" placeholder="..." value="" title="Por favor ingrese su primer nombre" required="" pattern="[0-9]{10}" >
 			</div>
 			
 			
 				
 			<div class="form-control"> 
-				<label class="header">Sucursal preferida  <span>:</span></label>
+				<label class="header">Sucursal preferida  *<span>:</span></label>
 				
-				<input name="sucursal" list="level1" id="lastname" placeholder="Escoja Sucursal" value="" class="textbox" type="text" required="" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{1,48}" >
+				<select style=" background-color: rgba(41, 26, 8, 0.5); font-size: 70%;" name="sucursal"   placeholder="Escoja Sucursal" value=""   required="" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{1,48}" >
+  
+  <option value="" disabled selected>...</option> 
+ <option value="Antioquia - Medellin" ><h1>Antioquia - Medellin</h1></option>
+  <option value="Boyaca- Tunja" >Boyaca- Tunja</option>
+    <option value="Centro - Bogota">Centro - Bogota</option>
+	 <option value="Meta - Villavicencio" >Meta - Villavicencio</option>
+    <option value="valle - Cali">valle - Cali</option>
+     <option value="Santander - Bucaramanga" >Santander - Bucaramanga</option>
    
-  <datalist id="level1">
-    <option value="Centro - Bogota" />
-    <option value="valle - Cali" />
-    <option value="Antioquia - Medellin" />
-    <option value="Meta - Villavicencio" />
-   <option value="Santander - Bucaramanga" />
-    <option value="Boyaca- Tunja" />
-    </datalist>  
-				
+
+				</select>
 				</div>
 		
 			
@@ -297,12 +285,12 @@ function confirmation() {
 		<div class="clear"></div>
 		<div class="form-control">
 			<label class="header">Direccion domicilio <span>:</span></label>
-			<textarea REQUIRED id="message1" name="direccion" rows="1" size="150" placeholder="ingrese direccion" value="" title="Please enter Your Comments" onKeyDown="valida_longitud()" onKeyUp="valida_longitud()" ></textarea>
+			<textarea REQUIRED id="message1" name="direccion" rows="1" size="150" maxlength="150" placeholder="ingrese direccion" value="" title="Please enter Your Comments"  pattern="[a-z]{1,30}(,[a-z]{1,30})*" ></textarea>
 			<div class="clear"></div>
 		</div>
 		<div class="form-control">
 			<label class="header">Observaciones <span>:</span></label>
-			<textarea id="message1" name="observacion" placeholder="ingrese comentarios"  value="" title="Please enter Your Comments"></textarea>
+			<textarea id="message1" name="observacion" placeholder="ingrese comentarios"  size="190" maxlength="190" value="" title="Please enter Your Comments"></textarea>
 			<div class="clear"></div>
 		</div>
         
@@ -313,7 +301,7 @@ function confirmation() {
 
       <fieldset>
         <div class="form-control" >
-				
+				<legend id="lastname" class="form-control" style="color: white;">* &nbsp  &nbsp Informacion obligatoria en formulario</legend>  
 				<legend id="lastname" class="form-control" style="color: white;">Recibir Informacion por:</legend>          
           <input type="checkbox" id="lastname2"
                  name = "chk1"
@@ -397,7 +385,7 @@ function confirmation() {
 		
 			
 			
-			
+		<script src="js/scripttext.js"></script>	
 		<!-- jQuery -->
 		<script src="js/jquery-1.10.2.min.js"></script>
 		<!-- jQuery Easing -->
