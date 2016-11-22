@@ -77,50 +77,51 @@ Pagina Lista de clientes
 							<li class="active" >
 								<a href="#" class="fh5co-sub-ddown">Menu</a>
 								 <ul class="fh5co-sub-menu">
-								 	<li class="active" >
-										<a href="#" class="fh5co-sub-ddown">Clientes...</a>
+								 
+								 
+									
+									<li>
+										<a href="#" class="fh5co-sub-ddown">Gestion Clientes ...&nbsp </a>
 										<ul class="fh5co-sub-menu">
-											<li><a href="findclientes.php">Buscar</a></li>
-											<li><a href="right-sidebar.html">Registro Clientes</a></li>
-											<li class="active" ><a href="modclientes.php">Modificar / Eliminar</a></li>
-											<li><a href="listclientes.php">Lista De clientes</a></li>
+											<li><a href="findclientes.php">Buscar  </a></li>
+											<li><a href="right-sidebar.html">Registrar </a></li>
+											<li class="active" ><a href="#">Modificar </a></li>
+											<li><a href="eliminoclientes.php">Eliminar</a></li>
+											<li><a href="listclientes.php">Lista General</a></li>
 										</ul>
 									</li>
 									
 									<li>
-										<a href="#" class="fh5co-sub-ddown">Productos...</a>
+										<a href="#" class="fh5co-sub-ddown"><h5  > <font color="yellow">Productos ...</font> </h5></a>
 										<ul class="fh5co-sub-menu">
-											<li><a href="left-sidebar.html">Agregar</a></li>
-											<li><a href="#">Modificar / Eliminar</a></li>
-											<li><a href="#">Catalago Productos</a></li>
+											<li><a href="left-sidebar.html">Agregar Nuevo</a></li>
+											<li><a href="modprod.php">Modificar</a></li>
+											<li><a href="modprod.php">Eliminar</a></li>
+											<li><a href="elements.php">Catalogo general </a></li>
 										</ul>
 									</li>
+									
+									
+									<li>
+										<a href="#" class="fh5co-sub-ddown">Nuevos Productos ... &nbsp <br></a>
+										<ul class="fh5co-sub-menu">
+											<li><a href="Sondeo.php">Sondeo</a></li>
+											<li><a href="son.php">Resultados</a></li>
+										</ul>
+									</li>
+									
+									
 								</ul>
 							</li>
 							<li ><a href="elements.php">Lista de Productos</a></li>
-							<li class="active"><a href="#">Lista de Clientes</a></li>
+							<li class="active"><a href="listclientes.php">Lista de Clientes</a></li>
 						</ul>
 					</nav>
 
 				</div>
 			</header>
 			
-			<!-- START #fh5co-hero 
-			<aside id="fh5co-hero" style="background-image: url(images/hero.jpg);">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2">
-							<div class="fh5co-hero-wrap">
-								<div class="fh5co-hero-intro">
-										<h2>Inner Page<span></span></h2>
-										<h1>Right Sidebar</h1>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</aside>  -->
-
+			
 			
 					
 	
@@ -137,6 +138,13 @@ Pagina Lista de clientes
                     
                 </MARQUEE> 
                   </a></h1><center>
+				  
+				  
+				   <br>
+
+<h3  > <font color="white"> Seleccione en el codigo o editar el codigo registro a modificar </font> </h3>
+ <br>
+		
 <!-- esto es para enviar archivos a la base de datos -->
 <table  border="2"  >
 		<thead background="img/verde1.png">
@@ -215,35 +223,29 @@ Pagina Lista de clientes
 </center>
 				<br>
 <br>
+
 				
-					<div class="col-md-12">
-										<div class="form-group">
+				
+										
 											<input type="submit" class="btn btn-primary btn-lg " value="Crear Nuevo Cliente" value="Crear Nuevo Cliente" onClick="location.href='http://localhost/sharp/display/right-sidebar.html'">
 
-										</div>			
+											
 							
 		<br>
 <br>
 <br>
-<br>		
-							
-				<footer id="fh5co-footer" style=" background: white;">
-					<center><p class="text-muted fh5co-no-margin-bottom text-center"><small>&copy; 2016 <a href="#">Core</a>. Todos los derechos reservados <em>por</em> <a href="#" target="_blank">Sharp</a> <br> <a href="http://unsplash.com/" target="_blank"></a></small></p><center>
-					<div class="container">
-						
-							
-						<!-- <ul class="fh5co-social-icons">
-							<!-- <li><a href="#"><i class="ti-twitter-alt"></i></a></li> -->
-							<!-- <li><a href="#"><i class="ti-facebook"></i></a></li>-->
-							
-							<!-- <li><a href="https://co.linkedin.com/in/sharp-cascos-07980512b"><i class="ti-linkedin"></i></a></li> -->
-						<!-- </ul> -->
-						
-
+<br>	
 <br>
-
-					</div>
-				</footer>
+<br>
+<br>
+<br>
+<br>
+	
+							
+				
+					<center><p style=" background: white;" class="text-muted fh5co-no-margin-bottom text-center"> <br> <small>&copy; 2016 <a href="#">Core</a>. Todos los derechos reservados <em>por</em> <a href="#" target="_blank">Sharp</a> <br> <a href="http://unsplash.com/" target="_blank"></a></small></p><center>
+				
+			
 		
 		
 			
