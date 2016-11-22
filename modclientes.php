@@ -221,19 +221,7 @@ Pagina Lista de clientes
 </table>
 
 </center>
-				<br>
-<br>
 
-				
-				
-										
-											<input type="submit" class="btn btn-primary btn-lg " value="Crear Nuevo Cliente" value="Crear Nuevo Cliente" onClick="location.href='http://localhost/sharp/display/right-sidebar.html'">
-
-											
-							
-		<br>
-<br>
-<br>
 <br>	
 <br>
 <br>

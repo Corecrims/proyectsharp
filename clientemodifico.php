@@ -19,7 +19,7 @@ function confirmation() {
 		
 		 if(confirm(" Presione Si para confirmar eliminacion del registro "))
     {
-		
+		alert("Eliminacion de Registro completado !! ")
 		return true;
 	}
     }
