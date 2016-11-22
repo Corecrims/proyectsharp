@@ -32,7 +32,7 @@
 		
 		
 		
-<link rel="stylesheet" href="css/stylecata.css">
+<link rel="stylesheet" href="css/styleson.css">
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 		<style type="text/css">
 ${demo.css}
@@ -45,40 +45,60 @@ ${demo.css}
 
 
 
-
 <!-- START #fh5co-header -->
 			<header id="fh5co-header-section" role="header" class="" >
 				<div class="container">
 					
 					<!-- START #fh5co-logo -->
-					<h1 id="fh5co-logo" class="pull-left"><a href="index.html"><img src ="images/SHARP-1.png" width="90" height="70"></a></h1>
+					<h1 id="fh5co-logo" class="pull-left"><a href="index.html" ><img src ="images/SHARP-1.png" width="110" height="75"></a></h1>
 					
 					<!-- START #fh5co-menu-wrap -->
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
-							<li>
-								<a href="index.html">Principal</a>
+							<li >
+								<a href="index.html">Inicio</a>
 							</li>
 							<li>
-								<a href="#" class="fh5co-sub-ddown">Menu</a>
+								<a href="#" class="fh5co-sub-ddown"><h5 color= black ;>Menu</h5></a>
 								 <ul class="fh5co-sub-menu">
-								 	<li><a href="left-sidebar.html">Registro de Productos</a></li>
-								 	<li><a href="right-sidebar.html">Registrar Clientes</a></li>
-									<li class="active" ><a href="#">Resultados Sondeo</a></li>
+								 	
+								 	
+									
+									
 									<li>
-										<a href="#" class="fh5co-sub-ddown">JavaScript</a>
+										<a href="#" class="fh5co-sub-ddown">Gestion Clientes ...&nbsp </a>
 										<ul class="fh5co-sub-menu">
-											<li><a href="#">jQuery</a></li>
-											<li><a href="#">Zipto</a></li>
-											<li><a href="#">Node.js</a></li>
-											<li><a href="#">AngularJS</a></li>
+											<li><a href="findclientes.php">Buscar  </a></li>
+											<li><a href="right-sidebar.html">Registrar </a></li>
+											<li><a href="modclientes.php">Modificar </a></li>
+											<li><a href="eliminoclientes.php">Eliminar</a></li>
+											<li><a href="listclientes.php">Lista General</a></li>
 										</ul>
 									</li>
-									<li><a href="#">CSS3</a></li> 
+									
+									<li>
+										<a href="#" class="fh5co-sub-ddown"><h5  > <font color="yellow">Productos ...</font> </h5></a>
+										<ul class="fh5co-sub-menu">
+											<li><a href="left-sidebar.html">Agregar Nuevo</a></li>
+											<li><a href="modprod.php">Modificar</a></li>
+											<li><a href="modprodelim.php">Eliminar</a></li>
+											<li><a href="elements.php">Catalogo general </a></li>
+										</ul>
+									</li>
+									
+									
+									<li>
+										<a href="#" class="fh5co-sub-ddown">Nuevos Productos ... &nbsp <br></a>
+										<ul class="fh5co-sub-menu">
+											<li class="active"><a href="Sondeo.php">Sondeo</a></li>
+											<li  ><a href="son.php">Resultados</a></li>
+										</ul>
+									</li>
+									
 								</ul>
 							</li>
-							<li ><a href="elements.php">Lista de Productos</a></li>
-							<li><a href="contact.html">Lista de Clientes</a></li>
+							<li><a href="elements.php">Catalogo Productos</a></li>
+							<li><a href="contact.html">Contactenos</a></li>
 						</ul>
 					</nav>
 
@@ -94,7 +114,9 @@ ${demo.css}
 	<br>
 	<br>
 	<br>
-<center><h1><MARQUEE BGCOLOR=#ea103c> NUEVOS PRODUCTOS
+<center><h1><MARQUEE style="    -moz-box-shadow: 10px 10px 5px #000000;
+-webkit-box-shadow: 10px 10px 5px #000000;
+box-shadow: 10px 10px 5px #000000;"> NUEVOS PRODUCTOS VOTACIONES
                     
                 </MARQUEE> 
                   </a></h1><center>
@@ -118,17 +140,17 @@ ${demo.css}
 		</tr>
 		
 		<tr>
-		<th><center><br></br></center></th>
-		<th background="img/verde2.png"><center> <br> Nuevo Casco 1<br></br></center></th>
+		<th ><center><br></br></center></th>
+		<th background="img/verde2.png" style="text-shadow:5px 3px 5px #bcd6d4;"><center> <br> Nuevo Casco 1<br></br></center></th>
 		    <th><center><br></br></center></th>
-			<th background="img/verde2.png" ><center> <br> Nuevo Casco 2<br></br></center></th>
+			<th background="img/verde2.png" style="text-shadow:5px 3px 5px #bcd6d4;"><center> <br> Nuevo Casco 2<br></br></center></th>
 			<!-- <th><center>Cantidad<br></br></center></th> -->
 			<th><center><br></br></center></th>
-			<th background="img/verde2.png"><center><br>Nuevo Casco 3<br></br></center></th>
+			<th background="img/verde2.png" style="text-shadow:5px 3px 5px #bcd6d4;"><center><br>Nuevo Casco 3<br></br></center></th>
 			<th><center><br></br></center></th>
-			<th  background="img/verde2.png" ><center>Nuevo Casco 4<br></br></center></th>
+			<th  background="img/verde2.png" style="text-shadow:5px 3px 5px #bcd6d4;" ><center><br>Nuevo Casco 4<br></br></center></th>
 			<th><center><br></br></center></th>
-			<th background="img/verde2.png" ><center>Nuevo Casco 5<br></br></center></th>
+			<th background="img/verde2.png" style="text-shadow:5px 3px 5px #bcd6d4;" ><center><br>Nuevo Casco 5<br></br></center></th>
 			<th><center><br></br></center></th>
 		</tr>
 		 
@@ -166,7 +188,7 @@ ${demo.css}
 			<tr>
 			
 				<td></td>
-			<td background="img/fondoGris.jpg"> <center> <div id="image1" class="contadorClicks"><img src="img/1.png" value=""width="150" height="150" >
+			<td background="img/fondoGris.jpg"> <center> <div id="image1" class="contadorClicks"><img src="imgson/1.png" value=""width="150" height="150" >
 			
 			
 			
@@ -212,7 +234,7 @@ ${demo.css}
 				
 		?>
 			
-			<td background="img/fondoGris.jpg"> <center> <div id="image2" class="contadorClicks"><img src="img/2.png" width="150" height="150" >
+			<td background="img/fondoGris.jpg"> <center> <div id="image2" class="contadorClicks"><img src="imgson/2.png" width="150" height="150" >
 			
 			
 			
@@ -259,7 +281,7 @@ ${demo.css}
 				
 		?>
 			
-			<td background="img/fondoGris.jpg"> <center> <div id="image3" class="contadorClicks"><img src="img/3.png" width="150" height="150" >
+			<td background="img/fondoGris.jpg"> <center> <div id="image3" class="contadorClicks"><img src="imgson/3.png" width="150" height="150" >
 			
 			
 			
@@ -309,7 +331,7 @@ ${demo.css}
 				
 		?>
 			
-			<td background="img/fondoGris.jpg"> <center> <div id="image4" class="contadorClicks"><img src="img/4.png" width="150" height="150" >
+			<td background="img/fondoGris.jpg"> <center> <div id="image4" class="contadorClicks"><img src="imgson/4.png" width="150" height="150" >
 			
 			
 			
@@ -360,7 +382,7 @@ ${demo.css}
 				
 		?>
 			
-			<td background="img/fondoGris.jpg"> <center> <div id="image5" class="contadorClicks"><img src="img/5.png" width="150" height="150" >
+			<td background="img/fondoGris.jpg"> <center> <div id="image5" class="contadorClicks"><img src="imgson/5.png" width="150" height="150" >
 			
 			
 			
@@ -392,37 +414,11 @@ ${demo.css}
 			
 			
 			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
 			</tr>
 			
 			
 			
-			
-			
-			
-			
+
 			
 			
 			
@@ -445,10 +441,6 @@ ${demo.css}
 
 
 
-
-
-
-
 <div>
 				
 			
@@ -460,10 +452,6 @@ ${demo.css}
 				</footer>
 		
 		
-
-
-
-
 
 
 

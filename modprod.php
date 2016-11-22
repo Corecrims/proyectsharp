@@ -45,7 +45,7 @@
 	
 
 	<!-- Theme Style -->
-	<link rel="stylesheet" href="css/stylecata.css">
+	<link rel="stylesheet" href="css/stymodprod.css">
 
 	
 	<!-- FOR IE9 below -->
@@ -89,9 +89,9 @@
 										<a href="#" class="fh5co-sub-ddown"><h5  > Productos ... </h5></a>
 										<ul class="fh5co-sub-menu">
 											<li ><a href="left-sidebar.html">Agregar Nuevo</a></li>
-											<li><a href="modprod.php">Modificar</a></li>
-											<li><a href="modprod.php">Eliminar</a></li>
-											<li class="active" ><a href="#">Catalogo general </a></li>
+											<li class="active" ><a href="#">Modificar</a></li>
+											<li class="active" ><a href="#">Eliminar</a></li>
+											<li  ><a href="elements.php">Catalogo general </a></li>
 										</ul>
 									</li>
 									
@@ -143,29 +143,32 @@
 <tr>
 		    
 		</tr>
-<center><h1><MARQUEE style=" background-color: rgba(72, 159, 221, 0.6);"> <font  color= "white"  >CATALOGO DE PRODUCTOS
+<center><h1><MARQUEE style=" background-color: rgba(72, 159, 221, 0.9);"> <font  color= "white"  > MODIFICACION Y ELIMINACION DE PRODUCTOS
                     
                 </font></MARQUEE> 
                   </a></h1><center>
 <!-- esto es para enviar archivos a la base de datos -->
-<table  border="0"  >
+<table  border="1"  >
 		<thead >
 		<tr>
 		    
 		</tr>
 		
-		<tr background="img/verde1.png" style="text-shadow: 2px 4px 3px rgba(0,0,0,0.3);">
-		<th><center>Imagen<br></br></center></th>
+		<tr background="img/verde2.png"  >
+		<font color="white">
+		<h2><th><center>Imagen<br></br></center></th>
+		<th><center>Codigo<br></br></center></th>
 		   <th><center>Nombre<br></br></center></th>
 			<th><center>Modelo<br></br></center></th>
-			<!-- <th><center>Cantidad<br></br></center></th> -->
+			
 			
 			<th><center>Talla<br></br></center></th>
 			<th><center>Marca<br></br></center></th>
 			<th><center>Tipo Casco<br></br></center></th>
 			<th><center>Precio<br></br></center></th>
 			<th><center>Descripcion<br></br></center></th>
-			
+			<th><center> Editar<br></br></center></th> </h2>
+			</font>
 		</tr>
 		 <tr>
 		<th><center><br></center></th>
@@ -193,38 +196,24 @@
 			while($row = $resultado->fetch_assoc()){
 				
 		?>		
-			<tr background="img/fondoGris.jpg">
-			<td> <center> <img height= "150px" src="data:image/jpg;base64,<?php echo base64_encode($row['img_prod']); ?>" /> </center></td>
-			 <td style="text-shadow: 2px 4px 3px rgba(0,0,0,0.3);" > <center><strong><?php echo $row['nom_prod']; ?></strong></center> </td>
+			<tr background="img/cuadro1.png">
+			<td> <center> <img height= "60px" src="data:image/jpg;base64,<?php echo base64_encode($row['img_prod']); ?>" /> </center></td>
+                   <td > <center><?php echo $row['cod_prod']; ?></center> </td>			
+			<td > <center><?php echo $row['nom_prod']; ?></center> </td>
 			 <td> <center><h4><?php echo $row['mod_prod']; ?></h4> </center></td>
 			 <!-- <td> <center><h4><?php //echo $row['cant_prod']; ?></h4> </center></td>-->
 			
 			 <td> <center><?php echo $row['talla_prod']; ?> </center></td>
-			 <td> <center><strong><?php echo $row['marca_prod']; ?></strong> </center></td>
+			 <td> <center><?php echo $row['marca_prod']; ?> </center></td>
 			 <td> <center><?php echo $row['tipo_prod']; ?> </center></td>
-			 <td> <center><marquee  direction="top" style="text-shadow: 2px 4px 3px rgba(0,0,0,0.3);" >$.<?php echo $row['prec_prod']; ?></marquee> </center></td>
-			 <td align="justify"><font size=2 > <?php echo $row['desc_prod']; ?> </font></td>
-			 <!--<th> <a class="btn btn-primary btn-lg1" role="main" style="background: Silver;" href="modificando.php?cod_articulo=<?php echo $row['cod_articulo']; ?>">Modificar este Articulo</a> -->		 
+			 <td> <center>$.<?php echo $row['prec_prod']; ?></center></td>
+			 <td align="justify"> <font size=2 > <?php echo $row['desc_prod']; ?></font> </td>
+			 <th> <center><a  role="main" style="background: grey;" href="productoedit.php?cod_prod=<?php echo $row['cod_prod']; ?>">Modificar</a></center>		 
 			 <!-- <br></br><a href="Eliminando.php?cod_articulo=<?php echo $row['cod_articulo']; ?>" >Eliminar este Articulo</a> </th> -->
 			
 			</tr>
 			
-			<tr>
-			<td> <center>  </center></td>
-			
-			 <td> <center><h4></h4> </center></td>
-			 <!-- <td> <center><h4><?php //echo $row['cant_prod']; ?></h4> </center></td>-->
-			 <td> <center></center> </td>
-			 <td> <center> </center></td>
-			 <td> <center> </center></td>
-			 <td> <center> </center></td>
-			 <td> <center> </center></td>
-			 <td> </td>
-			 
-			 <!--<th> <a class="btn btn-primary btn-lg1" role="main" style="background: Silver;" href="modificando.php?cod_articulo=<?php echo $row['cod_articulo']; ?>">Modificar este Articulo</a> -->		 
-			 <!-- <br></br><a href="Eliminando.php?cod_articulo=<?php echo $row['cod_articulo']; ?>" >Eliminar este Articulo</a> </th> -->
-			
-			</tr>
+		
 			<?php
 				
 			}	
@@ -248,22 +237,15 @@
 <br>		
 <br>
 <br>
-							
+	<br>
+<br><br>
+<br><br>
+						
 					
-					<footer  style=" background: white;">
-							<div class="container">
-						<br>
-						<ul class="fh5co-social-icons">
-							<li><a href="https://twitter.com/Sharp_Cascos"><i class="ti-twitter-alt"></i></a></li>
-							<li><a href="https://www.facebook.com/Sharp-Cascos-380120332348421/"><i class="ti-facebook"></i></a></li>
 							
-							
-						</ul>
-
-					</div>
-					<center><p class="text-muted fh5co-no-margin-bottom text-center"><small>&copy; 2016 <a href="#">Core</a>. Todos los derechos reservados <em>por</em> <a href="#" target="_blank">Sharp</a> <br> <a href="http://unsplash.com/" target="_blank"></a></small></p><center>
+					<center style=" background: white;" ><p class="text-muted fh5co-no-margin-bottom text-center"><small>&copy; 2016 <a href="#">Core</a>. Todos los derechos reservados <em>por</em> <a href="#" target="_blank">Sharp</a> <br> <a href="http://unsplash.com/" target="_blank"></a></small></p><center>
 					
-				</footer>
+				
 					
 		
 			

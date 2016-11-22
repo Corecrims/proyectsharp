@@ -8,7 +8,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Ingreso de Productos</title>
+	<title>Actualizacion  de Productos</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -37,19 +37,19 @@
 	
 
 	<!-- Theme Style -->
-	<link rel="stylesheet" href="css/styleformprod.css">
+	<link rel="stylesheet" href="css/styleformprod2.css">
 
 	
 	<script type="text/javascript">
 <!--
 function confirmation() {
-    if(confirm("     ATENCION !!   Esta por liminar eliminar este registro   ¿Continuar? "))
+    if(confirm("     ATENCION !!   Esta por eliminar este producto   ¿Continuar? "))
     {
         
 		
-		 if(confirm(" Presione Si para confirmar eliminacion del registro "))
+		 if(confirm(" Presione Si para confirmar eliminacion  "))
     {
-		alert("Eliminacion de Registro completado !! ")
+		alert("Eliminacion completado !! ")
 		return true;
 	}
     }
@@ -117,8 +117,7 @@ function verifica(elemento)
 if(elemento.value == "")
 elemento.value = "";
 }
-</script>	
-	
+</script>
 	
 	
 	
@@ -176,6 +175,33 @@ function validar(frm) {
 
 	</head>
 	<body class="inner-page">
+	
+	
+	
+	
+	
+	
+	
+	<?php
+		
+		include("conexion.php");
+		$cod = $_REQUEST['cod_prod'];
+		
+		
+		
+		$query = "SELECT * FROM producto WHERE cod_prod = '$cod'";
+        $resultado = $conexion->query($query);
+	    $row = $resultado->fetch_assoc();
+			
+?>
+	
+	
+	
+	
+	
+
+	
+	
 
 			<!-- START #fh5co-header -->
 			<header id="fh5co-header-section" role="header" class="" >
@@ -243,12 +269,15 @@ function validar(frm) {
 		<br>
 		<br>
 		
-		
+	<center><h1><MARQUEE style=" background-color: rgba(72, 159, 221, 0.9);"> <font  color= "white"  > MODIFICACION Y ELIMINACION DE PRODUCTOS
+                    
+                </font></MARQUEE> 
+                  </a></h1><center>	
 				
 				<section>
 
   <div class="jumbotron text-center"  style="background-color: rgba(100, 100, 128, 0.5); text-align:center; margin: 0 auto; text-align: left; " > 
-  <form action="saveprod.php" method ="POST" enctype="multipart/form-data" onsubmit = "return validar(this)">
+  <form action="modifico_producto.php?cod_prod=<?php echo $row['cod_prod']; ?>" method ="POST" enctype="multipart/form-data" onsubmit = "return validar(this)">
   <table width="300" border="" background="" style="text-align:center; margin: 0 auto; text-align: left; ">
   <tbody>
     <tr>
@@ -263,7 +292,7 @@ function validar(frm) {
 	  </tr>
         <tr>
           <td><span class="label label-default" >Nombre</span></td>
-          <td><input id="lastname"  type="Text"  name="nombre" REQUIRED placeholder="..." value="" pattern="[a-zA-Z0-9 -]{2,10}" maxlength="10" title= "No se permiten simbolos o números negativos"></td>
+          <td><input id="lastname"  type="Text"  name="nombre" REQUIRED placeholder="..." value="<?php echo $row['mod_prod']; ?>" pattern="[a-zA-Z0-9 -]{2,10}" maxlength="10" title= "No se permiten simbolos o números negativos"></td>
           
         </tr>
         <tr>
@@ -273,7 +302,7 @@ function validar(frm) {
 	  </tr>
           <tr>
           <td><span class="label label-default" >Talla</span></td>
-          <td><input onkeypress="return nimrda(event)" id="lastname"  class="textbox" name="talla" list="listas1" placeholder="..."  type="text" required="" size="5" Title= "Escoja talla de menor a mayor medida" pattern="[A-Z]{1-3}">
+          <td><input onkeypress="return nimrda(event)" onclick="javascript: limpia(this);" id="lastname"  class="textbox" name="talla" list="listas1" placeholder="..."  type="text" required="" value="<?php echo $row['talla_prod']; ?>" Title= "Escoja talla de menor a mayor medida" pattern="[A-Z]{1-3}">
    
 	 <datalist id="listas1">
 	 
@@ -300,7 +329,7 @@ function validar(frm) {
 	  </tr>
         <tr>
           <td><span class="label label-default" >Marca</span></td>
-          <td><input onkeypress="return nimrda(event)" id="lastname" type="Text" maxlength="15" name="marca" list="listas2" REQUIRED placeholder="..." value="" pattern="[a-zA-Z0-9 -]{3,15}" maxlength="15" title= "Ingrese la marca del cascos"></td>
+          <td><input onkeypress="return nimrda(event)" onclick="javascript: limpia(this);" id="lastname" type="Text" maxlength="15" name="marca" list="listas2" REQUIRED placeholder="..." value="<?php echo $row['marca_prod']; ?>" pattern="[a-zA-Z0-9 -]{3,15}" maxlength="15" title= "Ingrese la marca del cascos"></td>
 	  
 	  <datalist id="listas2">
 	   <option value="AION" >
@@ -321,7 +350,7 @@ function validar(frm) {
 	  </tr>
         <tr>
           <td><span class="label label-default" >Modelo</span></td>
-          <td><input id="lastname" type="Text" maxlength="10" name="modelo" REQUIRED placeholder="EJE-123456" value="" pattern="[A-Z0-9-]{3,10}"/></td>
+          <td><input id="lastname" type="Text" maxlength="10" name="modelo" REQUIRED placeholder="EJE-123456"  value="<?php echo $row['mod_prod']; ?>" pattern="[A-Z0-9-]{3,10}"/></td>
 	    
         </tr>
         <tr>
@@ -331,7 +360,7 @@ function validar(frm) {
         </tr>
         <tr>
  <td><span class="label label-default" >Tipo</span></td>
-          <td><input id="lastname"  onkeypress="return nimrda(event)" class="textbox" name="tipo" list="listas3" placeholder="..."  type="text" required=""  Title= "">
+          <td><input id="lastname"  onkeypress="return nimrda(event)" onclick="javascript: limpia(this);" class="textbox" name="tipo" list="listas3" placeholder="..."  type="text" required=""   value="<?php echo $row['tipo_prod']; ?>" Title= "escoja el tipo adecuado">
    
 	 <datalist id="listas3">
 	  <option value="Abatible" >
@@ -353,7 +382,7 @@ function validar(frm) {
         <tr>
 		
 		<td><span class="label label-default">Precio</span></td>
-          <td><input  onkeypress="return solonum(event)" id="lastname" type="Text" name="precio" REQUIRED placeholder="$..." value="" pattern="[0-9]{1,11}" maxlength="11" title= "Ingrese precio, no se admite numeros negativos"></td>
+          <td><input  onkeypress="return solonum(event)" id="lastname" type="Text" name="precio" REQUIRED placeholder="$..." value="<?php echo $row['prec_prod']; ?>" pattern="[0-9]{1,11}" maxlength="11" title= "Ingrese precio, no se admite numeros negativos"></td>
           
         </tr>
         <tr>
@@ -364,7 +393,7 @@ function validar(frm) {
         </tr>
         <tr>
           <td><span class="label label-default">Descripción</span></td>
-          <td><textarea REQUIRED  rows="5" name="descrip" id="message"  placeholder="...."  size="190" maxlength="190" title="Ingrese descripcion" ></textarea></td>
+          <td><textarea REQUIRED  rows="5" name="descrip" id="message"  placeholder="...."  size="190" maxlength="190"  title="ingrese descripcion"><?php echo $row['desc_prod']; ?></textarea></td>
              
         </tr>
         <tr>
@@ -382,8 +411,9 @@ function validar(frm) {
       <td><div>
       <span class="label label-info">Imagen Seleccionada <br> <br><br> <br><br> </span>
 	  <br>
-       <output id="list" size="300"  ></output>
-       <input  id="files" type="file"  class="register2" REQUIRED name="imagen" />
+       <output id="list" size="300"   value="data:image/jpg;base64,<?php echo base64_encode($row['img_prod']); ?>" ></output>
+	     <img height= "90px" src="data:image/jpg;base64,<?php echo base64_encode($row['img_prod']); ?>" />
+       <input  id="files" type="file"  class="register2" REQUIRED name="imagen"  value="data:image/jpg;base64,<?php echo base64_encode($row['img_prod']); ?>" >    </input>
 	   
 	   
       </div></td>
@@ -395,6 +425,7 @@ function validar(frm) {
 </table>
 <br>
  <center><input type="submit" class="register" value="Guardar" >
+ <a class="reset" onClick="return confirmation()" href="deleteproducto.php?cod_prod=<?php echo $row['cod_prod']; ?>" ><br>Eliminar</a>
 <input type="button" class="reset" value="Cancelar" onClick="location.href='http://localhost/sharp/display/index.html'"></center>
 		 
 		 </form>

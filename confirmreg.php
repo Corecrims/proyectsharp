@@ -10,7 +10,7 @@ Pagina Lista de clientes
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Sharp &mdash; Clientes Registrados</title>
+	<title>Sharp &mdash; Confirmacion Registro</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
   <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
@@ -66,8 +66,11 @@ Pagina Lista de clientes
 				<div class="container">
 					
 					<!-- START #fh5co-logo -->
-					<h1 id="fh5co-logo" class="pull-left"><a href="index.html"><img src ="images/SHARP-1.png" width="90" height="70"></a></h1>
+					<h3 
 					
+					
+					
+				
 					<!-- START #fh5co-menu-wrap -->
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
@@ -77,51 +80,51 @@ Pagina Lista de clientes
 							<li class="active" >
 								<a href="#" class="fh5co-sub-ddown">Menu</a>
 								 <ul class="fh5co-sub-menu">
-								 	<li class="active">
-										<a href="#" class="fh5co-sub-ddown">Clientes...</a>
+									<li class="active">
+										<a href="#" class="fh5co-sub-ddown">Gestion Clientes...&nbsp </a>
 										<ul class="fh5co-sub-menu">
-											<li><a href="#">Buscar</a></li>
-											<li><a href="right-sidebar.html">Registro Clientes</a></li>
-											<li><a href="modclientes.php">Modificar / Eliminar</a></li>
-											<li class="active" ><a href="listclientes.php">Lista De clientes</a></li>
+											<li><a href="findclientes.php">Buscar</a></li>
+											<li class="active" ><a href="#">Registrar </a></li>
+											<li><a href="modclientes.php">Modificar </a></li>
+											<li><a href="modclientes.php">Eliminar</a></li>
+											<li><a href="listclientes.php">Lista General</a></li>
 										</ul>
 									</li>
 									
 									<li>
-										<a href="#" class="fh5co-sub-ddown">Productos...</a>
+										<a href="#" class="fh5co-sub-ddown"><h5  > <font color="yellow">Productos...&nbsp </font> </h5></a>
 										<ul class="fh5co-sub-menu">
-											<li><a href="left-sidebar.html">Agregar</a></li>
-											<li><a href="#">Modificar / Eliminar</a></li>
-											<li><a href="#">Catalago Productos</a></li>
+											<li><a href="left-sidebar.html">Agregar Nuevo</a></li>
+											<li><a href="#">Modificar</a></li>
+											<li><a href="#">Eliminar</a></li>
+											<li><a href="elements.php">Catalogo general</a></li>
+										</ul>
+									</li>
+									
+									
+									<li>
+										<a href="#" class="fh5co-sub-ddown">Nuevos Productos... &nbsp </a>
+										<ul class="fh5co-sub-menu">
+											<li><a href="Sondeo.php">Sondeo</a></li>
+											<li><a href="son.php">Resultados</a></li>
 										</ul>
 									</li>
 								</ul>
 							</li>
-							<li ><a href="elements.php">Lista de Productos</a></li>
-							<li class="active"><a href="#">Lista de Clientes</a></li>
+							<li><a href="elements.php">Productos</a></li>
+							<li class="active" ><a href="listclientes.php">Lista de Clientes</a></li>
 						</ul>
 					</nav>
+					
+					
+					&nbsp  &nbsp  &nbsp <a href="index.html" > <img src ="images/SHARP-1.png" width="90" height="70"></a></h3>
+					
+					
 
 				</div>
 			</header>
 			
-			<!-- START #fh5co-hero 
-			<aside id="fh5co-hero" style="background-image: url(images/hero.jpg);">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2">
-							<div class="fh5co-hero-wrap">
-								<div class="fh5co-hero-intro">
-										<h2>Inner Page<span></span></h2>
-										<h1>Right Sidebar</h1>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</aside>  -->
-
-			
+			<!-- START  -->
 					
 	
 <br></br>
@@ -133,10 +136,14 @@ Pagina Lista de clientes
 <tr>
 		    
 		</tr>
-<center><h1><MARQUEE BGCOLOR=#edecea> CLIENTES REGISTRADOS
+<center><h1>
                     
-                </MARQUEE> 
-                  </a></h1><center>
+      <br>
+
+<h1  > <font color="white"> Confirmacion de registro exitoso </font> </h1>
+ <br>
+		 <br>         
+                  </h1><center>
 <!-- esto es para enviar archivos a la base de datos -->
 <table  border="2"  >
 		<thead background="img/verde1.png">
