@@ -10,7 +10,7 @@ Pagina Lista de clientes
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Sharp &mdash; Clientes Registrados</title>
+	<title>Sharp &mdash; Eliminacion de registrados</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
   <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
@@ -49,13 +49,14 @@ Pagina Lista de clientes
 	
 
 	<!-- Theme Style -->
-	<link rel="stylesheet" href="css/stylelistclien.css">
+	<link rel="stylesheet" href="css/styleliminar.css">
 
 <script type="text/javascript">
 <!--
 function confirmation() {
     if(confirm("  ***************    	ATENCION !!  ¿ Realmente desea eliminar este registro cliente ? : "))
     {
+		alert("Eliminacion de registro completado !! ")
         return true;
     }
 	alert(" Eliminacion Cancelada !! ")
@@ -83,49 +84,50 @@ function confirmation() {
 							<li class="active" >
 								<a href="#" class="fh5co-sub-ddown">Menu</a>
 								 <ul class="fh5co-sub-menu">
-								 	<li class="active" >
-										<a href="#" class="fh5co-sub-ddown">Clientes...</a>
+								 
+								 
+								 	
+									<li class="active" >
+										<a href="#" class="fh5co-sub-ddown">Gestion Clientes ...&nbsp </a>
 										<ul class="fh5co-sub-menu">
-											<li><a href="findclientes.php">Buscar</a></li>
-											<li><a href="right-sidebar.html">Registro Clientes</a></li>
-											<li class="active" ><a href="modclientes.php">Modificar / Eliminar</a></li>
-											<li><a href="listclientes.php">Lista De clientes</a></li>
+											<li><a href="findclientes.php">Buscar  </a></li>
+											<li><a href="right-sidebar.html">Registrar </a></li>
+											<li  ><a href="modclientes.php">Modificar </a></li>
+											<li class="active"><a href="#">Eliminar</a></li>
+											<li><a href="listclientes.php">Lista General</a></li>
 										</ul>
 									</li>
 									
 									<li>
-										<a href="#" class="fh5co-sub-ddown">Productos...</a>
+										<a href="#" class="fh5co-sub-ddown"><h5  > <font color="yellow">Productos ...</font> </h5></a>
 										<ul class="fh5co-sub-menu">
-											<li><a href="left-sidebar.html">Agregar</a></li>
-											<li><a href="#">Modificar / Eliminar</a></li>
-											<li><a href="#">Catalago Productos</a></li>
+											<li><a href="left-sidebar.html">Agregar Nuevo</a></li>
+											<li><a href="modprod.php">Modificar</a></li>
+											<li><a href="modprod.php">Eliminar</a></li>
+											<li><a href="elements.php">Catalogo general </a></li>
 										</ul>
 									</li>
+									
+									
+									<li>
+										<a href="#" class="fh5co-sub-ddown">Nuevos Productos ... &nbsp <br></a>
+										<ul class="fh5co-sub-menu">
+											<li><a href="Sondeo.php">Sondeo</a></li>
+											<li><a href="son.php">Resultados</a></li>
+										</ul>
+									</li>
+									
 								</ul>
 							</li>
-							<li ><a href="elements.php">Lista de Productos</a></li>
-							<li class="active"><a href="#">Lista de Clientes</a></li>
+							<li class="active" ><a href="elements.php">Lista de Productos</a></li>
+							<li class="active"><a href="listclientes.php">Lista de Clientes</a></li>
 						</ul>
 					</nav>
 
 				</div>
 			</header>
 			
-			<!-- START #fh5co-hero 
-			<aside id="fh5co-hero" style="background-image: url(images/hero.jpg);">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2">
-							<div class="fh5co-hero-wrap">
-								<div class="fh5co-hero-intro">
-										<h2>Inner Page<span></span></h2>
-										<h1>Right Sidebar</h1>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</aside>  -->
+			
 
 			
 					
@@ -139,13 +141,19 @@ function confirmation() {
 <tr>
 		    
 		</tr>
-<center><h1><MARQUEE BGCOLOR=#edecea> MODIFICACION DE CLIENTES
+<center><h2><MARQUEE BGCOLOR=#edecea> MODIFICACION Y ELIMINACION DE REGISTROS
                     
                 </MARQUEE> 
-                  </a></h1><center>
+                  </a></h2><center>
 <!-- esto es para enviar archivos a la base de datos -->
+
+		   <br>
+
+<h3  > <font color="white"> Seleccione en el codigo a eliminar con clic en la "X" o modifique con el codigo</font> </h3>
+
+		
 <table  border="2"  >
-		<thead background="img/verde1.png">
+		<thead background="img/verde2.png">
 		<tr>
 		    
 		</tr>
@@ -205,7 +213,7 @@ function confirmation() {
 			<!-- <th> <a  role="main" style="background: Silver;" href="clientemodifico.php?num_identificacion=<?php echo $row['num_identificacion']; ?>">Modificar este Cliente</a>  -->
 			 <!--<th> <a class="btn btn-primary btn-lg1" role="main" style="background: Silver;" href="modificando.php?cod_articulo=<?php echo $row['cod_articulo']; ?>">Modificar este Articulo</a> -->		 
 			 <!-- <br></br><a href="Eliminando.php?cod_articulo=<?php echo $row['cod_articulo']; ?>" >Eliminar este Articulo</a> </th> -->
-			<td  > <center><a   onClick="return confirmation()"  href="deleteclientes.php?num_identificacion=<?php echo $row['num_identificacion']; ?>"> <font color="red"> X</font></a> </center></td>
+			<td  > <center><a   onClick="return confirmation()"  href="deleteclientes1.php?num_identificacion=<?php echo $row['num_identificacion']; ?>"> <font color="red"> X</font></a> </center></td>
 			</tr>
 			<?php
 				
@@ -221,41 +229,19 @@ function confirmation() {
 </table>
 
 </center>
-				<br>
-<br>
-				
-					<div class="col-md-12">
-										<div class="form-group">
-											<input type="submit" class="btn btn-primary btn-lg " value="Crear Nuevo Cliente" value="Crear Nuevo Cliente" onClick="location.href='http://localhost/sharp/display/right-sidebar.html'">
 
-										</div>			
-							
-		<br>
 <br>
 <br>
 <br>		
-							<div>
+		<br>
+<br>
+<br>
+<br>	
+				
+				
+					<center><p style=" background: white;" class="text-muted fh5co-no-margin-bottom text-center"> <br> <small>&copy; 2016 <a href="#">Core</a>. Todos los derechos reservados <em>por</em> <a href="#" target="_blank">Sharp</a> <br> <a href="http://unsplash.com/" target="_blank"></a></small></p><center>
 				
 			
-							
-<br>
-				<footer id="fh5co-footer" style=" background: white;">
-					<center><p class="text-muted fh5co-no-margin-bottom text-center"><small>&copy; 2016 <a href="#">Core</a>. Todos los derechos reservados <em>por</em> <a href="#" target="_blank">Sharp</a> <br> <a href="http://unsplash.com/" target="_blank"></a></small></p><center>
-					<div class="container">
-						
-							
-						<!-- <ul class="fh5co-social-icons">
-							<!-- <li><a href="#"><i class="ti-twitter-alt"></i></a></li> -->
-							<!-- <li><a href="#"><i class="ti-facebook"></i></a></li>-->
-							
-							<!-- <li><a href="https://co.linkedin.com/in/sharp-cascos-07980512b"><i class="ti-linkedin"></i></a></li> -->
-						<!-- </ul> -->
-						
-
-<br>
-
-					</div>
-				</footer>
 		
 		
 			
