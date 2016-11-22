@@ -47,10 +47,10 @@ $(function () {
             }
         },
         title: {
-            text: 'Contents of Highsoft\'s weekly fruit delivery'
+            text: 'Total de Votaciones en el sondeo de nuevos productos de Cascos Sharp'
         },
         subtitle: {
-            text: '3D donut in Highcharts'
+            text: 'Sistema de Donut 3D determina que producto lleva la mayor cantidad de votos'
         },
         plotOptions: {
             pie: {
@@ -59,10 +59,10 @@ $(function () {
             }
         },
         series: [{
-            name: 'Delivered amount',
+            name: 'Cantidad Total de Votos',
             data: [
                <?php
-			$sql=mysql_query("select * from producto");
+			$sql=mysql_query("select * from producto WHERE tipo_prod= 'Nuevo' ");
 			while($res=mysql_fetch_array($sql)){
 			?>
 			
@@ -86,48 +86,68 @@ $(function () {
 
 
 
-
 <!-- START #fh5co-header -->
 			<header id="fh5co-header-section" role="header" class="" >
 				<div class="container">
 					
 					<!-- START #fh5co-logo -->
-					<h1 id="fh5co-logo" class="pull-left"><a href="index.html"><img src ="images/SHARP-1.png" width="90" height="70"></a></h1>
+					<h1 id="fh5co-logo" class="pull-left"><a href="index.html" ><img src ="images/SHARP-1.png" width="110" height="75"></a></h1>
 					
 					<!-- START #fh5co-menu-wrap -->
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
-							<li>
-								<a href="index.html">Principal</a>
+							<li >
+								<a href="index.html">Inicio</a>
 							</li>
 							<li>
-								<a href="#" class="fh5co-sub-ddown">Menu</a>
+								<a href="#" class="fh5co-sub-ddown"><h5 color= black ;>Menu</h5></a>
 								 <ul class="fh5co-sub-menu">
-								 	<li><a href="left-sidebar.html">Registro de Productos</a></li>
-								 	<li><a href="right-sidebar.html">Registrar Clientes</a></li>
-									<li class="active" ><a href="#">Resultados Sondeo</a></li>
+								 	
+								 	
+									
+									
 									<li>
-										<a href="#" class="fh5co-sub-ddown">JavaScript</a>
+										<a href="#" class="fh5co-sub-ddown">Gestion Clientes ...&nbsp </a>
 										<ul class="fh5co-sub-menu">
-											<li><a href="#">jQuery</a></li>
-											<li><a href="#">Zipto</a></li>
-											<li><a href="#">Node.js</a></li>
-											<li><a href="#">AngularJS</a></li>
+											<li><a href="findclientes.php">Buscar  </a></li>
+											<li><a href="right-sidebar.html">Registrar </a></li>
+											<li><a href="modclientes.php">Modificar </a></li>
+											<li><a href="eliminoclientes.php">Eliminar</a></li>
+											<li><a href="listclientes.php">Lista General</a></li>
 										</ul>
 									</li>
-									<li><a href="#">CSS3</a></li> 
+									
+									<li>
+										<a href="#" class="fh5co-sub-ddown"><h5  > <font color="yellow">Productos ...</font> </h5></a>
+										<ul class="fh5co-sub-menu">
+											<li><a href="left-sidebar.html">Agregar Nuevo</a></li>
+											<li><a href="modprod.php">Modificar</a></li>
+											<li><a href="modprodelim.php">Eliminar</a></li>
+											<li><a href="elements.php">Catalogo general </a></li>
+										</ul>
+									</li>
+									
+									
+									<li class="active">
+										<a href="#" class="fh5co-sub-ddown">Nuevos Productos ... &nbsp <br></a>
+										<ul class="fh5co-sub-menu">
+											<li class="active" ><a href="Sondeo.php">Sondeo</a></li>
+											<li class="active"><a href="son.php">Resultados</a></li>
+										</ul>
+									</li>
+									
 								</ul>
 							</li>
-							<li ><a href="elements.php">Lista de Productos</a></li>
-							<li><a href="contact.html">Lista de Clientes</a></li>
+							<li class="active"><a href="elements.php">Catalogo Productos</a></li>
+							<li class="active" ><a href="contact.html">Contactenos</a></li>
 						</ul>
 					</nav>
 
 				</div>
 			</header>
-
-
-
+		
+		
+		
 
 <br>
 <br>
@@ -139,7 +159,6 @@ $(function () {
 <!-- es el grafico que se muestra -->
 <div id="container" style="min-width: 310px; height: 400px; max-width: 800px; margin: 0 auto"></div>
 <br><br>
-<center><a href="ejemplo2.php">2</a></center>
 
 
 
@@ -152,27 +171,12 @@ $(function () {
 
 
 
-<div>
-				
-			
+
 							
 <br>
-				<footer id="fh5co-footer" style=" background: white;">
+				<footer  style=" background: white;">
 					<center><p class="text-muted fh5co-no-margin-bottom text-center"><small>&copy; 2016 <a href="#">Core</a>. Todos los derechos reservados <em>por</em> <a href="#" target="_blank">Sharp</a> <br> <a href="http://unsplash.com/" target="_blank"></a></small></p><center>
-					<div class="container">
-						
-							
-						<!-- <ul class="fh5co-social-icons">
-							<!-- <li><a href="#"><i class="ti-twitter-alt"></i></a></li> -->
-							<!-- <li><a href="#"><i class="ti-facebook"></i></a></li>-->
-							
-							<!-- <li><a href="https://co.linkedin.com/in/sharp-cascos-07980512b"><i class="ti-linkedin"></i></a></li> -->
-						<!-- </ul> -->
-						
-
-<br>
-
-					</div>
+			
 				</footer>
 		
 		

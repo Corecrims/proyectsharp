@@ -183,8 +183,8 @@ if(isset($_POST["btn1"])){
 										<a href="#" class="fh5co-sub-ddown"><h5  > <font color="yellow">Productos...&nbsp</font> </h5></a>
 										<ul class="fh5co-sub-menu">
 											<li><a href="left-sidebar.html">Agregar Nuevo</a></li>
-											<li><a href="#">Modificar</a></li>
-											<li><a href="#">Eliminar</a></li>
+											<li><a href="modprod.php">Modificar</a></li>
+											<li><a href="modprodelim">Eliminar</a></li>
 											<li><a href="elements.php">Catalogo general</a></li>
 										</ul>
 									</li>

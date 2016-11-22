@@ -13,7 +13,7 @@
  <script type="text/javascript">
 <!--
 function confirmation() {
-    if(confirm("     ATENCION !!   Esta por liminar eliminar este registro   ¿Continuar? "))
+    if(confirm("     ATENCION !!   Esta por  eliminar este registro   ¿Continuar? "))
     {
         
 		
