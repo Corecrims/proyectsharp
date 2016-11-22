@@ -51,12 +51,18 @@ Pagina Lista de clientes
 	<!-- Theme Style -->
 	<link rel="stylesheet" href="css/stylelistclien.css">
 
-	
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+<script type="text/javascript">
+<!--
+function confirmation() {
+    if(confirm("  ***************    	ATENCION !!  ¿ Realmente desea eliminar este registro cliente ? : "))
+    {
+        return true;
+    }
+	alert(" Eliminacion Cancelada !! ")
+    return false;
+}
+//-->
+</script>
 
 	</head>
 	<body class="inner-page">
@@ -162,7 +168,7 @@ Pagina Lista de clientes
 			<th><center>Direccion<br></br></center></th>
 			<th><center>Observaciones<br></br></center></th>
 			<th><center>Envio Info.<br></br></center></th>
-			<th><center> Editar <br></br></center></th>
+			<th><center> Eliminar <br></br></center></th>
 		</tr>
 		 
 		</thead>
@@ -176,10 +182,10 @@ Pagina Lista de clientes
 		$query = "SELECT * FROM cliente";
         $resultado = $conexion->query($query);
 			while($row = $resultado->fetch_assoc()){
-				
+			
 		?>		
 			<tr>
-		
+			
 			 <td> <center><h6><a style="background: green;" role="main" href="clientemodifico.php?num_identificacion=<?php echo $row['num_identificacion']; ?>" ><?php echo $row['num_identificacion']; ?> </a> </h6> </center></td>
 			 <td> <center><h6><?php echo $row['tipo_id_clien']; ?></h6> </center></td>
 			 <td class="ajustar1" > <center><h6><?php echo $row['pri_nombre_clien']; ?></h6> </center></td>
@@ -196,8 +202,10 @@ Pagina Lista de clientes
 			 <td class="ajustar1" > <center><h6><?php echo $row['dir_clien']; ?></h6> </center></td>
 			 <div style="overflow: auto" > <td class="ajustar1" > <center><h6><?php echo $row['obs_clien']; ?> </h6></center></td> </div>
 			<td> <center><h6><?php echo $row['Envio_info_Clien']; ?> </h6></center></td>  
-			
-			<td  > <center><h6><a  role="main"  href="clientemodifico.php?num_identificacion=<?php echo $row['num_identificacion']; ?>"> <font color="black"><--</a></h6> </center></td>
+			<!-- <th> <a  role="main" style="background: Silver;" href="clientemodifico.php?num_identificacion=<?php echo $row['num_identificacion']; ?>">Modificar este Cliente</a>  -->
+			 <!--<th> <a class="btn btn-primary btn-lg1" role="main" style="background: Silver;" href="modificando.php?cod_articulo=<?php echo $row['cod_articulo']; ?>">Modificar este Articulo</a> -->		 
+			 <!-- <br></br><a href="Eliminando.php?cod_articulo=<?php echo $row['cod_articulo']; ?>" >Eliminar este Articulo</a> </th> -->
+			<td  > <center><a   onClick="return confirmation()"  href="deleteclientes.php?num_identificacion=<?php echo $row['num_identificacion']; ?>"> <font color="red"> X</font></a> </center></td>
 			</tr>
 			<?php
 				
@@ -226,7 +234,11 @@ Pagina Lista de clientes
 <br>
 <br>
 <br>		
+							<div>
+				
+			
 							
+<br>
 				<footer id="fh5co-footer" style=" background: white;">
 					<center><p class="text-muted fh5co-no-margin-bottom text-center"><small>&copy; 2016 <a href="#">Core</a>. Todos los derechos reservados <em>por</em> <a href="#" target="_blank">Sharp</a> <br> <a href="http://unsplash.com/" target="_blank"></a></small></p><center>
 					<div class="container">

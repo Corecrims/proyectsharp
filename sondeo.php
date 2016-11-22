@@ -94,7 +94,7 @@ ${demo.css}
 	<br>
 	<br>
 	<br>
-<center><h1><MARQUEE BGCOLOR=#9b7909> NUEVOS PRODUCTOS
+<center><h1><MARQUEE BGCOLOR=#ea103c> NUEVOS PRODUCTOS
                     
                 </MARQUEE> 
                   </a></h1><center>
@@ -103,39 +103,38 @@ ${demo.css}
 
 
  <br>
-		 <br>
-		 <br>
+		 
 		 <br>
 
-<h1  > <font color="white">Su opinion es muy importante para nosotros, a continuacion se muestra la nueva linea de productos escoja el producto que mas le llama la atencion: </font> </h1>
+<h1  > <font color="white">Su opinion es muy importante para nosotros, a continuacion se muestra la nueva linea de productos presione clic encima del producto: </font> </h1>
  <br>
 		 <br>
-		 <br>
-		 <br>		 
+				 
 <!-- esto es para enviar archivos a la base de datos -->
-<table  border="5"  >
-		<thead background="img/verde1.png">
+<table   >
+		<thead >
 		<tr>
 		    
 		</tr>
 		
 		<tr>
-		<th><center>Imagen<br></br></center></th>
-		    <th><center>Codigo <br></br></center></th>
-			<th><center>Modelo<br></br></center></th>
+		<th><center><br></br></center></th>
+		<th background="img/verde2.png"><center> <br> Nuevo Casco 1<br></br></center></th>
+		    <th><center><br></br></center></th>
+			<th background="img/verde2.png" ><center> <br> Nuevo Casco 2<br></br></center></th>
 			<!-- <th><center>Cantidad<br></br></center></th> -->
-			<th><center>Nombre<br></br></center></th>
-			<th><center>Talla<br></br></center></th>
-			<th><center>Marca<br></br></center></th>
-			<th><center>Tipo Casco<br></br></center></th>
-			<th><center>Precio<br></br></center></th>
-			<th><center>Descripcion<br></br></center></th>
-			
+			<th><center><br></br></center></th>
+			<th background="img/verde2.png"><center><br>Nuevo Casco 3<br></br></center></th>
+			<th><center><br></br></center></th>
+			<th  background="img/verde2.png" ><center>Nuevo Casco 4<br></br></center></th>
+			<th><center><br></br></center></th>
+			<th background="img/verde2.png" ><center>Nuevo Casco 5<br></br></center></th>
+			<th><center><br></br></center></th>
 		</tr>
 		 
 		</thead>
 		
-		<tbody background="img/fondoGris.jpg" >
+		<tbody  >
 		
 		 <div id="ok" style="display: none;"> <br>
 		 
@@ -153,56 +152,280 @@ ${demo.css}
 		 <br>
 		 <br>
 		 <br>
-			<tr>
-			<td> <center> <div id="image1" class="contadorClicks"><img src="img/4.png" width="150" height="150" /> </div></center></td>
-			 <td> <center><h4><?php echo $row['cod_prod']; ?></h4> </center></td>
-			 <td> <center><h4><?php echo $row['mod_prod']; ?></h4> </center></td>
-			 <!-- <td> <center><h4><?php //echo $row['cant_prod']; ?></h4> </center></td>-->
-			 <td> <center><?php echo $row['nom_prod']; ?></center> </td>
-			 <td> <center><?php echo $row['talla_prod']; ?> </center></td>
-			 <td> <center><?php echo $row['marca_prod']; ?> </center></td>
-			 <td> <center><?php echo $row['tipo_prod']; ?> </center></td>
-			 <td> <center><?php echo $row['prec_prod']; ?> </center></td>
-			 <td> <?php echo $row['desc_prod']; ?> </td>
-			 
-			 <!--<th> <a class="btn btn-primary btn-lg1" role="main" style="background: Silver;" href="modificando.php?cod_articulo=<?php echo $row['cod_articulo']; ?>">Modificar este Articulo</a> -->		 
-			 <!-- <br></br><a href="Eliminando.php?cod_articulo=<?php echo $row['cod_articulo']; ?>" >Eliminar este Articulo</a> </th> -->
-			
-			</tr>
-			
-			<tr>
-			<td> <center> <div id="image2" class="contadorClicks"><img src="img/11.png" width="150" height="150" /> </div></center></td>
-			 <td> <center><h4><?php echo $row['cod_prod']; ?></h4> </center></td>
-			 <td> <center><h4><?php echo $row['mod_prod']; ?></h4> </center></td>
-			 <!-- <td> <center><h4><?php //echo $row['cant_prod']; ?></h4> </center></td>-->
-			 <td> <center><?php echo $row['nom_prod']; ?></center> </td>
-			 <td> <center><?php echo $row['talla_prod']; ?> </center></td>
-			 <td> <center><?php echo $row['marca_prod']; ?> </center></td>
-			 <td> <center><?php echo $row['tipo_prod']; ?> </center></td>
-			 <td> <center><?php echo $row['prec_prod']; ?> </center></td>
-			 <td> <?php echo $row['desc_prod']; ?> </td>
-			 
-			 <!--<th> <a class="btn btn-primary btn-lg1" role="main" style="background: Silver;" href="modificando.php?cod_articulo=<?php echo $row['cod_articulo']; ?>">Modificar este Articulo</a> -->		 
-			 <!-- <br></br><a href="Eliminando.php?cod_articulo=<?php echo $row['cod_articulo']; ?>" >Eliminar este Articulo</a> </th> -->
-			
-			</tr>
+		 
+		 
+		 <?php
 		
-		<tr>
-			<td> <center> <div id="image3" class="contadorClicks"><img src="img/14.png" width="150" height="150" /> </div></center></td>
-			 <td> <center><h4><?php echo $row['cod_prod']; ?></h4> </center></td>
-			 <td> <center><h4><?php echo $row['mod_prod']; ?></h4> </center></td>
-			 <!-- <td> <center><h4><?php //echo $row['cant_prod']; ?></h4> </center></td>-->
-			 <td> <center><?php echo $row['nom_prod']; ?></center> </td>
-			 <td> <center><?php echo $row['talla_prod']; ?> </center></td>
-			 <td> <center><?php echo $row['marca_prod']; ?> </center></td>
-			 <td> <center><?php echo $row['tipo_prod']; ?> </center></td>
-			 <td> <center><?php echo $row['prec_prod']; ?> </center></td>
-			 <td> <?php echo $row['desc_prod']; ?> </td>
+		include("conexion.php");
+		
+		$query = "SELECT * FROM producto WHERE nuevo_prod = '1'";
+        $resultado = $conexion->query($query);
+			while($row = $resultado->fetch_assoc()){
+				
+		?>
+			<tr>
+			
+				<td></td>
+			<td background="img/fondoGris.jpg"> <center> <div id="image1" class="contadorClicks"><img src="img/1.png" value=""width="150" height="150" >
+			
+			
+			
+			</div></center>
+			 <center><?php echo $row['nom_prod']; ?></center>
+			<center>Talla: <?php echo $row['talla_prod']; ?> </center>
+			<center>Marca: <?php echo $row['marca_prod']; ?> </center>
+			<center>Tipo Casco: <?php echo $row['tipo_prod']; ?> </center>
+			<center><?php echo $row['desc_prod']; ?> </center>
+			 <center> ...............................</center>
+			  <center>Precio: <?php echo $row['prec_prod']; ?> </center>
+			</td>
 			 
-			 <!--<th> <a class="btn btn-primary btn-lg1" role="main" style="background: Silver;" href="modificando.php?cod_articulo=<?php echo $row['cod_articulo']; ?>">Modificar este Articulo</a> -->		 
-			 <!-- <br></br><a href="Eliminando.php?cod_articulo=<?php echo $row['cod_articulo']; ?>" >Eliminar este Articulo</a> </th> -->
+			
+			
+			</img>
+			 
+			 <?php
+				
+			}	
+			?>
+			
+			
+			
+			<td></td>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			 <?php
+		
+		include("conexion.php");
+		
+		$query = "SELECT * FROM producto WHERE nuevo_prod = '2'";
+        $resultado = $conexion->query($query);
+			while($row = $resultado->fetch_assoc()){
+				
+		?>
+			
+			<td background="img/fondoGris.jpg"> <center> <div id="image2" class="contadorClicks"><img src="img/2.png" width="150" height="150" >
+			
+			
+			
+			</div></center>
+			 <center><?php echo $row['nom_prod']; ?></center>
+			<center>Talla: <?php echo $row['talla_prod']; ?> </center>
+			<center>Marca: <?php echo $row['marca_prod']; ?> </center>
+			<center>Tipo Casco: <?php echo $row['tipo_prod']; ?> </center>
+			<center><?php echo $row['desc_prod']; ?> </center>
+			 <center> ...............................</center>
+			  <center>Precio: <?php echo $row['prec_prod']; ?> </center>
+			</td>
+			 
+			
+			
+			</img>
+			 
+			 <?php
+				
+			}	
+			?>
+			
+			
+			
+			
+				<td></td>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			 <?php
+		
+		include("conexion.php");
+		
+		$query = "SELECT * FROM producto WHERE nuevo_prod = '3'";
+        $resultado = $conexion->query($query);
+			while($row = $resultado->fetch_assoc()){
+				
+		?>
+			
+			<td background="img/fondoGris.jpg"> <center> <div id="image3" class="contadorClicks"><img src="img/3.png" width="150" height="150" >
+			
+			
+			
+			</div></center>
+			 <center><?php echo $row['nom_prod']; ?></center>
+			<center>Talla: <?php echo $row['talla_prod']; ?> </center>
+			<center>Marca: <?php echo $row['marca_prod']; ?> </center>
+			<center>Tipo Casco: <?php echo $row['tipo_prod']; ?> </center>
+			<center><?php echo $row['desc_prod']; ?> </center>
+			 <center> ...............................</center>
+			  <center>Precio: <?php echo $row['prec_prod']; ?> </center>
+			</td>
+			 
+			
+			
+			</img>
+			 
+			 <?php
+				
+			}	
+			?>
+			
+			
+			
+				<td></td>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			 <?php
+		
+		include("conexion.php");
+		
+		$query = "SELECT * FROM producto WHERE nuevo_prod = '4'";
+        $resultado = $conexion->query($query);
+			while($row = $resultado->fetch_assoc()){
+				
+		?>
+			
+			<td background="img/fondoGris.jpg"> <center> <div id="image4" class="contadorClicks"><img src="img/4.png" width="150" height="150" >
+			
+			
+			
+			</div></center>
+			 <center><?php echo $row['nom_prod']; ?></center>
+			<center>Talla: <?php echo $row['talla_prod']; ?> </center>
+			<center>Marca: <?php echo $row['marca_prod']; ?> </center>
+			<center>Tipo Casco: <?php echo $row['tipo_prod']; ?> </center>
+			<center><?php echo $row['desc_prod']; ?> </center>
+			 <center> ...............................</center>
+			  <center>Precio: <?php echo $row['prec_prod']; ?> </center>
+			</td>
+			 
+			
+			
+			</img>
+			 
+			 <?php
+				
+			}	
+			?>
+			
+			
+			
+				<td></td>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			
+			
+			
+			
+			
+			 <?php
+		
+		include("conexion.php");
+		
+		$query = "SELECT * FROM producto WHERE nuevo_prod = '5'";
+        $resultado = $conexion->query($query);
+			while($row = $resultado->fetch_assoc()){
+				
+		?>
+			
+			<td background="img/fondoGris.jpg"> <center> <div id="image5" class="contadorClicks"><img src="img/5.png" width="150" height="150" >
+			
+			
+			
+			</div></center>
+			 <center><?php echo $row['nom_prod']; ?></center>
+			<center>Talla: <?php echo $row['talla_prod']; ?> </center>
+			<center>Marca: <?php echo $row['marca_prod']; ?> </center>
+			<center>Tipo Casco: <?php echo $row['tipo_prod']; ?> </center>
+			<center><?php echo $row['desc_prod']; ?> </center>
+			 <center> ...............................</center>
+			  <center>Precio: <?php echo $row['prec_prod']; ?> </center>
+			</td>
+			 
+			
+			
+			</img>
+			 
+			 <?php
+				
+			}	
+			?>
+			
+			
+			
+				<td></td>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			
 			</tr>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 		
 		</div>
 		</tbody>
@@ -231,22 +454,9 @@ ${demo.css}
 			
 							
 <br>
-				<footer id="fh5co-footer" style=" background: white;">
+				<footer  style=" background: white;">
 					<center><p class="text-muted fh5co-no-margin-bottom text-center"><small>&copy; 2016 <a href="#">Core</a>. Todos los derechos reservados <em>por</em> <a href="#" target="_blank">Sharp</a> <br> <a href="http://unsplash.com/" target="_blank"></a></small></p><center>
-					<div class="container">
-						
-							
-						<!-- <ul class="fh5co-social-icons">
-							<!-- <li><a href="#"><i class="ti-twitter-alt"></i></a></li> -->
-							<!-- <li><a href="#"><i class="ti-facebook"></i></a></li>-->
-							
-							<!-- <li><a href="https://co.linkedin.com/in/sharp-cascos-07980512b"><i class="ti-linkedin"></i></a></li> -->
-						<!-- </ul> -->
-						
-
-<br>
-
-					</div>
+			
 				</footer>
 		
 		

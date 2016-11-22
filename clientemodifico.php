@@ -29,24 +29,122 @@ function confirmation() {
 //-->
 </script>
  
- <script type="text/javascript">
-<!--
-function confirmation1() {
-    if(confirm(" Se va actualizar registro, si esta seguro presione Aceptar "))
+
+<script>
+    function soloLetras(e){
+       key = e.keyCode || e.which;
+       tecla = String.fromCharCode(key).toLowerCase();
+       letras = "asdfghjklxcvbnmertyuiopertuiop";
+       especiales = "intersexual";
+
+       tecla_especial = false
+       for(var i in especiales){
+            if(key == especiales[i]){
+                tecla_especial = true;
+                break;
+            }
+        }
+
+        if(letras.indexOf(tecla)==-1 && !tecla_especial){
+            return false;
+        }
+    }
+</script>
+<script>
+    function soloLetrasM(e){
+       key = e.keyCode || e.which;
+       tecla = String.fromCharCode(key).toLowerCase();
+       letras = "";
+       especiales = " -! 1234567890 !#$%&/()=?¡/ ()=? ";
+
+       tecla_especial = false
+       for(var i in especiales){
+            if(key == especiales[i]){
+                tecla_especial = true;
+                break;
+            }
+        }
+
+        if(letras.indexOf(tecla)==-1 && !tecla_especial){
+            return false;
+        }
+    }
+</script>
+
+<script>
+    function soloLetrassuc(e){
+       key = e.keyCode || e.which;
+       tecla = String.fromCharCode(key).toLowerCase();
+       letras = "";
+       especiales = "asdfghjklxcvbnmertyuiopertuiop";
+
+       tecla_especial = false
+       for(var i in especiales){
+            if(key == especiales[i]){
+                tecla_especial = true;
+                break;
+            }
+        }
+
+        if(letras.indexOf(tecla)==-1 && !tecla_especial){
+            return false;
+        }
+    }
+</script>
+<script>
+function limpia(elemento)
+{
+elemento.value = "";
+}
+
+function verifica(elemento)
+{
+if(elemento.value == "")
+elemento.value = "";
+}
+</script>
+
+<script>
+    function sinsimb(e){
+       key = e.keyCode || e.which;
+       tecla = String.fromCharCode(key).toLowerCase();
+       letras = "1234567890asdfghjklñqwertyuiopzxcvbnm #-";
+       especiales = "8-37-39-46";
+
+       tecla_especial = false
+       for(var i in especiales){
+            if(key == especiales[i]){
+                tecla_especial = true;
+                break;
+            }
+        }
+
+        if(letras.indexOf(tecla)==-1 && !tecla_especial){
+            return false;
+        }
+    }
+</script>
+
+	<script>
+function validar(frm) {
+  if (frm.direccion.value.length < 20) {
+    alert('La direccion esta errada, revise sus datos');
+    frm.direccion.focus();
+	 return false;
+  }
+   {
+    if(confirm(" Se va actualizar registro, si esta seguro presione [ Aceptar ] "))
         
     {
 		
 		return true;
 	}
     
-	alert("Eliminacion Cancelada !! ")
+	alert("Modificacion Cancelada !! ")
     return false;
 }
-//-->
+}
 </script>
-
-  	<!-- Facebook and Twitter integration -->
-	
 
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <link rel="shortcut icon" href="favicon.ico">
@@ -90,6 +188,20 @@ function confirmation1() {
 		
 		include("conexion.php");
 		$cod = $_REQUEST['num_identificacion'];
+		
+		if($cod == ""){
+	echo "no se ha ingresado codigo";
+	echo "   ";
+	print "<br/> \n";
+	print "<br/> \n";
+	header("Location: findclientes.php");
+	
+
+}
+else{
+	
+		
+		
 		$query = "SELECT * FROM cliente WHERE num_identificacion = '$cod'";
         $resultado = $conexion->query($query);
 	    $row = $resultado->fetch_assoc();
@@ -98,7 +210,7 @@ function confirmation1() {
 				$asd= "email";
 				$asd1="domicilio";
 				$asd2="sms";
-
+}
 			
 ?>
 	
@@ -125,28 +237,39 @@ function confirmation1() {
 							<li class="active">
 								<a href="#" class="fh5co-sub-ddown">Menu</a>
 								 <ul class="fh5co-sub-menu">
-								 	<li class="active">
-										<a href="#" class="fh5co-sub-ddown">Clientes...</a>
+								 <li class="active">
+										<a href="#" class="fh5co-sub-ddown">Gestion Clientes...&nbsp </a>
 										<ul class="fh5co-sub-menu">
 											<li><a href="findclientes.php">Buscar</a></li>
-											<li><a href="right-sidebar.html">Registro Clientes</a></li>
-											<li class="active" ><a href="modclientes.php">Modificar / Eliminar</a></li>
-											<li><a href="listclientes.php">Lista De clientes</a></li>
+											<li ><a href="right-sidebar.html">Registrar </a></li>
+											<li class="active"><a href="#">Modificar </a></li>
+											<li><a href="modclientes.php">Eliminar</a></li>
+											<li><a href="listclientes.php">Lista General</a></li>
 										</ul>
 									</li>
 									
 									<li>
-										<a href="#" class="fh5co-sub-ddown">Productos...</a>
+										<a href="#" class="fh5co-sub-ddown"><h5  > <font color="yellow">Productos...&nbsp </font> </h5></a>
 										<ul class="fh5co-sub-menu">
-											<li><a href="left-sidebar.html">Agregar</a></li>
-											<li><a href="#">Modificar / Eliminar</a></li>
-											<li><a href="elements.php">Catalago Productos</a></li>
+											<li><a href="left-sidebar.html">Agregar Nuevo</a></li>
+											<li><a href="#">Modificar</a></li>
+											<li><a href="#">Eliminar</a></li>
+											<li><a href="elements.php">Catalogo general</a></li>
+										</ul>
+									</li>
+									
+									
+									<li>
+										<a href="#" class="fh5co-sub-ddown">Nuevos Productos... &nbsp </a>
+										<ul class="fh5co-sub-menu">
+											<li><a href="Sondeo.php">Sondeo</a></li>
+											<li><a href="son.php">Resultados</a></li>
 										</ul>
 									</li>
 								</ul>
 							</li>
 							<li><a href="elements.php">Productos</a></li>
-							<li><a href="listclientes.php">Lista de Clientes</a></li>
+							<li class="active" ><a href="modclientes.php">Lista de Clientes</a></li>
 						</ul>
 					</nav>
 					
@@ -158,31 +281,36 @@ function confirmation1() {
 				</div>
 			</header>
 			
-		
+		<br>	
+<br>
 			
 				
-
-<br></br>
-
-<br></br>
-<br></br>	
-							
-							
-								
+<h2><marquee style=" color: yellow;
+   background-color: rgba(103, 107, 106, 0.7);" behavior="alternate" scrolldelay="40"  align="bottom" > 
+				
+				AREA DE MODIFICACION CLIENTE 
+				
+			
+				
+				</marquee>	</h2>
+<br>
+					
+	<center><h1 style="font-size:20px; background-color: #982626; " > <font color="white" >Se esta modificando el cliente con codigo: <?php echo $row['num_identificacion']; ?> </font> </h1></center>
+ 
 <div class="content-w3ls">
-	<form action="procesomodif.php?num_identificacion=<?php echo $row['num_identificacion']; ?>" method ="POST" enctype="multipart/form-data">
+	<form action="procesomodif.php?num_identificacion=<?php echo $row['num_identificacion']; ?>" method ="POST" enctype="multipart/form-data" onsubmit = "return validar(this)">
 		<div class="form-wthree1 wthree w3-agileits agileits-w3layouts agile w3-agile">
 			
 			
 			<div class="form-control"> 
 				<label class="header">Numero Identificacion <span>:</span></label>
-				<input type="text" id="firstname" disabled name="identificacion" placeholder="..." value="<?php echo $row['num_identificacion']; ?>" title="Por favor ingrese su primer nombre" required="" pattern="[0-9]{10}" >
+				<input type="text" id="firstname" readonly name="identificacion" placeholder="..." value="<?php echo $row['num_identificacion']; ?>" title="Por favor ingrese su primer nombre" required="" pattern="[0-9]{10}" >
 			</div>
 			
 			
 			<div class="form-control">	
 				<label class="header">Tipo Identificacion <span>:</span></label>	
-				<input class="lastname" name="tipo" id="lastname" list="listas3" placeholder="..." value="<?php echo $row['tipo_id_clien']; ?>"  type="text" required="" size="5" Title= "Seleccione un tipo de identificacion" >
+				<input  onkeypress="return soloLetrasM(event)" onclick="javascript: limpia(this);" onBlur="javascript: verifica(this);" class="lastname" name="tipo" id="lastname" list="listas3" placeholder="..." value="<?php echo $row['tipo_id_clien']; ?>"  type="text" required="" size="5" Title= "Seleccione un tipo de identificacion"  maxlength="2" pattern="[a-zA-Z]{2}" >
    
   <datalist id="listas3">
    <option value="CC">
@@ -197,22 +325,22 @@ function confirmation1() {
 			
 			<div class="form-control"> 
 				<label class="header">Primer Nombre <span>:</span></label>
-				<input type="text" id="firstname" name="p1nombre" placeholder="..." value="<?php echo $row['pri_nombre_clien']; ?>" title="Por favor ingrese su primer nombre" required="" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{1,48}" >
+				<input type="text" id="firstname" name="p1nombre" placeholder="..." value="<?php echo $row['pri_nombre_clien']; ?>" title="Por favor ingrese su primer nombre" required="" maxlength="40" pattern="[a-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšž]{1,40}">
 			</div>	
 			
 			<div class="form-control"> 
 				<label class="header">Segundo nombre : <span>:</span></label>
-				<input type="text" id="middlename" name="s2nombre" placeholder="..."  value="<?php echo $row['sec_nombre_cline']; ?>" title="Por favor ingrese su segundo nombre"  pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{1,40}">
+				<input type="text" id="middlename" name="s2nombre" placeholder="..."  value="<?php echo $row['sec_nombre_cline']; ?>" title="Por favor ingrese su segundo nombre" maxlength="40" pattern="[a-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšž ]{1,40}" >
 			</div>
 			
 			<div class="form-control"> 
 				<label class="header">Primer Apellido <span>:</span></label>
-				<input type="text" id="lastname" name="1apellido" placeholder=".." value="<?php echo $row['pri_apel_clien']; ?>" title="Por favor ingrese su primer apellido" required="" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{1,48}">
+				<input type="text" id="lastname" name="1apellido" placeholder=".." value="<?php echo $row['pri_apel_clien']; ?>" title="Por favor ingrese su primer apellido" required="" maxlength="50" pattern="[a-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšž]{1,50}">
 			</div>
 			
 			<div class="form-control"> 
 				<label class="header">Segundo Apellido <span>:</span></label>
-				<input type="text" id="lastname" name="2apellido" placeholder=".."  value="<?php echo $row['sec_apel_clien']; ?>" title="Por favor ingrese su segundo apellido"  pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{1,40}">
+				<input type="text" id="lastname" name="2apellido" placeholder=".."  value="<?php echo $row['sec_apel_clien']; ?>" title="Por favor ingrese su segundo apellido"  maxlength="50" pattern="[a-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšž ]{1,50}">
 			</div>
 			
 			
@@ -235,7 +363,7 @@ function confirmation1() {
 			
 			<div class="form-control">	
 				<label class="header">Genero <span>:</span></label>	
-				<input class="lastname" name="genero" id="lastname" list="listas1" placeholder="..." value="<?php echo $row['gen_clien']; ?>"  type="text"  size="5" Title= "Seleccione un tipo de identificacion" >
+				<input  onkeypress="return soloLetras(event)" onclick="javascript: limpia(this);" onBlur="javascript: verifica(this);" class="lastname" name="genero" id="lastname" list="listas1" placeholder="..." value="<?php echo $row['gen_clien']; ?>"  type="text"  size="5" maxlength="11" Title= "Seleccione un tipo de identificacion" pattern="[a-zA-Zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšž]{3,11}">
    
   <datalist id="listas1">
    <option value="Lesbico">
@@ -270,12 +398,12 @@ function confirmation1() {
 			
 			<div class="form-control">	
 				<label class="header">Correo electronico <span>:</span></label>
-				<input type="email" id="email" name="correo" placeholder="Mail@example.com"  value="<?php echo $row['correo_clien']; ?>" title="Please enter a Valid Email Address" required="">
+				<input type="email" id="email" name="correo"  placeholder="ejemplo@sharp-cascos.com" maxlength="100" value="<?php echo $row['correo_clien']; ?>" title="Please enter a Valid Email Address" required="">
 			</div>
 			
 			<div class="form-control"> 
 				<label class="header">Telefono fijo <span>:</span></label>
-				  <input id="lastname" name="telefono" placeholder="Ingrese Numero"  value="<?php echo $row['tel_clien']; ?>"  class="textbox" type="text" maxlength="8" pattern="[0-9]{8}" title= "No se Permiten Simbolos o Numeros negativos"  >
+				  <input id="lastname" name="telefono" placeholder="Ingrese Numero"  value="<?php echo $row['tel_clien']; ?>"  class="textbox" type="text" maxlength="8" placeholder="(indicativo)#######" pattern="[0-9]{8}" maxlength="8" title= "No se Permiten Simbolos o Numeros negativos"  >
 
 			</div>
 			
@@ -292,7 +420,7 @@ function confirmation1() {
 			<div class="form-control"> 
 				<label class="header">Sucursal preferida  <span>:</span></label>
 				
-				<input name="sucursal" list="level1" id="lastname" placeholder="Escoja Sucursal" value="<?php echo $row['suc_cliente']; ?>" class="textbox" type="text" required="" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{1,48}" >
+				<input  onkeypress="return soloLetrassuc(event)" onclick="javascript: limpia(this);" name="sucursal" list="level1" id="lastname" placeholder="Escoja Sucursal" value="<?php echo $row['suc_cliente']; ?>" class="textbox" type="text" required="" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{1,48}" >
    
   <datalist id="level1">
     <option value="Centro - Bogota" />
@@ -320,29 +448,17 @@ function confirmation1() {
 		<div class="clear"></div>
 		<div class="form-control">
 			<label class="header">Direccion domicilio <span>:</span></label>
-			<textarea REQUIRED id="message1" name="direccion" rows="1" size="150" placeholder="ingrese direccion" value="<?php echo $row['pri_apel_clien']; ?>" title="Please enter Your Comments" ><?php echo $row['dir_clien']; ?></textarea>
+			<textarea REQUIRED onkeypress="return sinsimb(event)" id="message1" name="direccion" rows="1" size="150" maxlength="150" placeholder="ingrese direccion" value="<?php echo $row['pri_apel_clien']; ?>" title="Please enter Your Comments" ><?php echo $row['dir_clien']; ?></textarea>
 			<div class="clear"></div>
 		</div>
 		<div class="form-control">
 			<label class="header">Observaciones <span>:</span></label>
-			<textarea id="message" name="observacion" placeholder="ingrese comentarios"  value="" title="Please enter Your Comments"><?php echo $row['obs_clien']; ?></textarea>
+			<textarea id="message1" onkeypress="return sinsimb(event)" name="observacion" placeholder="ingrese comentarios"  maxlength="190" value="" title="Please enter Your Comments"><?php echo $row['obs_clien']; ?></textarea>
 			<div class="clear"></div>
 		</div>
         
         
-       <!-- <div class="form-control"> 
-				<label class="header">Envio Informacion  <span>:</span></label>
-				<input type="text" list="tipo" id="lastname" name="recibir" placeholder="..." value="<?php echo $row['Envio_info_Clien']; ?>"   pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{1,48}" >
-			 <datalist id="tipo">
-			  <option value="    " />
-    <option value="email" />
-    <option value="sms" />
-    <option value="domicilio" />
-    <option value="email domicilio sms" />
-    </datalist>  
-			
-			
-			</div>	-->
+     
   
 
 
@@ -374,8 +490,8 @@ function confirmation1() {
 		
 		 <div class="form-control" >
           
-       <input type="submit" class="register" value="Guardar" name="btenviar1" onClick="return confirmation1()">
-	   <a class="register1" onClick="return confirmation()" href="deleteclientes.php?num_identificacion=<?php echo $row['num_identificacion']; ?>" >Eliminar este registro</a>
+       <input type="submit" class="register" value="Guardar" name="btenviar1" >
+	   <a class="register1" onClick="return confirmation()" href="deleteclientes.php?num_identificacion=<?php echo $row['num_identificacion']; ?>" ><br>Eliminar este registro</a>
 			<input type="button" class="reset" value="Cancelar" onClick="location.href='http://localhost/sharp/display/modclientes.php'">
 			<div class="clear"></div>
         </div>
@@ -390,46 +506,16 @@ function confirmation1() {
 							
 							
 							
+						<br>	
+
 							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-									
-							<div>
-				
-			
-							
-<br>
 				<footer id="fh5co-footer" style=" background: white;">
 					<center><p class="text-muted fh5co-no-margin-bottom text-center"><small>&copy; 2016 <a href="#">Core</a>. Todos los derechos reservados <em>por</em> <a href="#" target="_blank">Sharp</a> <br> <a href="http://unsplash.com/" target="_blank"></a></small></p><center>
 					<div class="container">
 						
 							
-						<!-- <ul class="fh5co-social-icons">
-							<!-- <li><a href="#"><i class="ti-twitter-alt"></i></a></li> -->
-							<!-- <li><a href="#"><i class="ti-facebook"></i></a></li>-->
-							
-							<!-- <li><a href="https://co.linkedin.com/in/sharp-cascos-07980512b"><i class="ti-linkedin"></i></a></li> -->
-						<!-- </ul> -->
 						
 
-<br>
 
 					</div>
 				</footer>

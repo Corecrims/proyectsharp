@@ -10,7 +10,7 @@ $conexion = new mysqli("localhost","root","","sharpbd")or die("Error Conexion") 
 
 // este if valida la conexion a la base de datos
 if($conexion){
-echo "Se ha conectado a la base de datos";
+//echo "Se ha conectado a la base de datos";
 	
 }
 else{

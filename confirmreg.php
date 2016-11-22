@@ -77,13 +77,13 @@ Pagina Lista de clientes
 							<li class="active" >
 								<a href="#" class="fh5co-sub-ddown">Menu</a>
 								 <ul class="fh5co-sub-menu">
-								 	<li class="active" >
+								 	<li class="active">
 										<a href="#" class="fh5co-sub-ddown">Clientes...</a>
 										<ul class="fh5co-sub-menu">
-											<li><a href="findclientes.php">Buscar</a></li>
+											<li><a href="#">Buscar</a></li>
 											<li><a href="right-sidebar.html">Registro Clientes</a></li>
-											<li class="active" ><a href="modclientes.php">Modificar / Eliminar</a></li>
-											<li><a href="listclientes.php">Lista De clientes</a></li>
+											<li><a href="modclientes.php">Modificar / Eliminar</a></li>
+											<li class="active" ><a href="listclientes.php">Lista De clientes</a></li>
 										</ul>
 									</li>
 									
@@ -133,7 +133,7 @@ Pagina Lista de clientes
 <tr>
 		    
 		</tr>
-<center><h1><MARQUEE BGCOLOR=#edecea> MODIFICACION DE CLIENTES
+<center><h1><MARQUEE BGCOLOR=#edecea> CLIENTES REGISTRADOS
                     
                 </MARQUEE> 
                   </a></h1><center>
@@ -145,7 +145,6 @@ Pagina Lista de clientes
 		</tr>
 		
 		<tr>
-		
 		<th><center>Identificacion<br></br></center></th>
 		    <th><center>Tipo Id. <br></br></center></th>
 			<th><center>Primer nombre<br></br></center></th>
@@ -162,7 +161,7 @@ Pagina Lista de clientes
 			<th><center>Direccion<br></br></center></th>
 			<th><center>Observaciones<br></br></center></th>
 			<th><center>Envio Info.<br></br></center></th>
-			<th><center> Editar <br></br></center></th>
+			
 		</tr>
 		 
 		</thead>
@@ -172,15 +171,14 @@ Pagina Lista de clientes
 		<?php
 		
 		include("conexion.php");
-		
-		$query = "SELECT * FROM cliente";
+		$cod = $_REQUEST['num_identificacion'];
+		$query = "SELECT * FROM cliente WHERE num_identificacion = '$cod'";
         $resultado = $conexion->query($query);
 			while($row = $resultado->fetch_assoc()){
 				
 		?>		
 			<tr>
-		
-			 <td> <center><h6><a style="background: green;" role="main" href="clientemodifico.php?num_identificacion=<?php echo $row['num_identificacion']; ?>" ><?php echo $row['num_identificacion']; ?> </a> </h6> </center></td>
+			 <td> <center><h6><?php echo $row['num_identificacion']; ?></h6> </center></td>
 			 <td> <center><h6><?php echo $row['tipo_id_clien']; ?></h6> </center></td>
 			 <td class="ajustar1" > <center><h6><?php echo $row['pri_nombre_clien']; ?></h6> </center></td>
 			 <td class="ajustar1"> <center><h6><?php echo $row['sec_nombre_cline']; ?></h6> </center></td>
@@ -189,15 +187,17 @@ Pagina Lista de clientes
 			  <td> <center><h6><?php echo $row['sexo_clien']; ?> </h6></center></td>
 			  <td> <center><h6><?php echo $row['gen_clien']; ?></h6> </center></td>
 			 <td> <center><h6><?php echo $row['fecha_nac_clien']; ?></h6> </center></td>
-			 <td class="ajustar1" > <center><h6><?php echo $row['correo_clien']; ?> </h6></center></td>
+			 <td  > <center><h6><?php echo $row['correo_clien']; ?> </h6></center></td>
 			 <td> <center><h6><?php echo $row['tel_clien']; ?> </h6></center></td>
 			 <td> <center><h6><?php echo $row['movil_clien']; ?></h6> </center></td>
-			 <td> <center><h6><?php echo $row['suc_cliente']; ?> </h6></center></td>
+			 <td class="ajustar1" > <center><h6><?php echo $row['suc_cliente']; ?> </h6></center></td>
 			 <td class="ajustar1" > <center><h6><?php echo $row['dir_clien']; ?></h6> </center></td>
-			 <div style="overflow: auto" > <td class="ajustar1" > <center><h6><?php echo $row['obs_clien']; ?> </h6></center></td> </div>
+			 <div style="overflow: auto" > <td class="ajustar" > <center><h6><?php echo $row['obs_clien']; ?> </h6></center></td> </div>
 			<td> <center><h6><?php echo $row['Envio_info_Clien']; ?> </h6></center></td>  
+			 
+			 <!--<th> <a class="btn btn-primary btn-lg1" role="main" style="background: Silver;" href="modificando.php?cod_articulo=<?php echo $row['cod_articulo']; ?>">Modificar este Articulo</a> -->		 
+			 <!-- <br></br><a href="Eliminando.php?cod_articulo=<?php echo $row['cod_articulo']; ?>" >Eliminar este Articulo</a> </th> -->
 			
-			<td  > <center><h6><a  role="main"  href="clientemodifico.php?num_identificacion=<?php echo $row['num_identificacion']; ?>"> <font color="black"><--</a></h6> </center></td>
 			</tr>
 			<?php
 				
@@ -213,12 +213,12 @@ Pagina Lista de clientes
 </table>
 
 </center>
-				<br>
 <br>
-				
+<br>
+							
 					<div class="col-md-12">
 										<div class="form-group">
-											<input type="submit" class="btn btn-primary btn-lg " value="Crear Nuevo Cliente" value="Crear Nuevo Cliente" onClick="location.href='http://localhost/sharp/display/right-sidebar.html'">
+											<input type="submit" class="btn btn-primary btn-lg " value="Crear Nuevo Cliente" onClick="location.href='http://localhost/sharp/display/right-sidebar.html'">
 
 										</div>			
 							
@@ -226,7 +226,11 @@ Pagina Lista de clientes
 <br>
 <br>
 <br>		
+							<div>
+				
+			
 							
+<br>
 				<footer id="fh5co-footer" style=" background: white;">
 					<center><p class="text-muted fh5co-no-margin-bottom text-center"><small>&copy; 2016 <a href="#">Core</a>. Todos los derechos reservados <em>por</em> <a href="#" target="_blank">Sharp</a> <br> <a href="http://unsplash.com/" target="_blank"></a></small></p><center>
 					<div class="container">

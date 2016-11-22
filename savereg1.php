@@ -75,7 +75,7 @@ if($resultado){
 	echo "   ";
 	print "<br/> \n";
 	print "<br/> \n";
-	header("Location: confirmreg.php?num_identificacion=". $ide);
+	header("Location: index.html" );
 	
 
 }

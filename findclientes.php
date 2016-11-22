@@ -48,7 +48,17 @@ window.onload = function(){
 //]]>
 </script>
 	
- 
+ <script>
+function validar(frm) {
+  if (frm.txtbus.value.length < 8) {
+    alert('Revise los campos vacios no es posible buscar, intente de nuevo');
+    frm.txtbus.focus();
+	 return "findclientes.php";
+	 return false;
+  }
+   
+}
+</script>
 
   	<!-- Facebook and Twitter integration -->
 	
@@ -78,11 +88,6 @@ window.onload = function(){
 	<link rel="stylesheet" href="css/styleformbus.css">
 
 	
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
 
 	</head>
 	<body >
@@ -219,14 +224,14 @@ if(isset($_POST["btn1"])){
 							
 								
 
-	<form action="" method ="POST" enctype="multipart/form-data">
+	<form action="" method ="POST" enctype="multipart/form-data" onsubmit = "return validar(this)">
 		
 		
 		
 		
 		<center><div class="form-control"> 
 				<label class="header"> Ingrese Codigo <span>:</span></label>
-				<input type="text" id="lastnameb" name="txtbus" placeholder="..." value="" title="Ingrese Codigo a Buscar" required="" pattern="[0-9]{10}" >
+				<input type="text" id="lastnameb" name="txtbus" placeholder="..." value="" title="Ingrese Codigo a Buscar" maxlength="10" REQUIRED  >
 				<input  id="btn1" type="Submit" value="Buscar" name="btn1" disabled="disabled" >
 			</div></center>
 		

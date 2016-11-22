@@ -181,19 +181,19 @@ Pagina Lista de clientes
 			 <td> <center><h6><?php echo $row['num_identificacion']; ?></h6> </center></td>
 			 <td> <center><h6><?php echo $row['tipo_id_clien']; ?></h6> </center></td>
 			 <td class="ajustar1" > <center><h6><?php echo $row['pri_nombre_clien']; ?></h6> </center></td>
-			 <td class="ajustar1"> <center><h6><?php echo $row['sec_nombre_cline']; ?></h6> </center></td>
+			 <td class="ajustar1" > <center><h6><?php echo $row['sec_nombre_cline']; ?></h6> </center></td>
 			 <td class="ajustar1"> <center><h6><?php echo $row['pri_apel_clien']; ?></h6> </center></td>
-			 <td class="ajustar1" > <center><h6><?php echo $row['sec_apel_clien']; ?></h6> </center></td>
+			 <td  class="ajustar1" > <center><h6><?php echo $row['sec_apel_clien']; ?></h6> </center></td>
 			  <td> <center><h6><?php echo $row['sexo_clien']; ?> </h6></center></td>
 			  <td> <center><h6><?php echo $row['gen_clien']; ?></h6> </center></td>
-			 <td> <center><h6><?php echo $row['fecha_nac_clien']; ?></h6> </center></td>
-			 <td class="ajustar1" > <center><h6><?php echo $row['correo_clien']; ?> </h6></center></td>
+			 <td class="ajustar1" > <center><h6><?php echo $row['fecha_nac_clien']; ?></h6> </center></td>
+		 <div style="overflow: auto; " >	 <td class="ajustar1" > <center><h6><?php echo $row['correo_clien']; ?> </h6></center></td> </div>
 			 <td> <center><h6><?php echo $row['tel_clien']; ?> </h6></center></td>
-			 <td> <center><h6><?php echo $row['movil_clien']; ?></h6> </center></td>
-			 <td> <center><h6><?php echo $row['suc_cliente']; ?> </h6></center></td>
+			 <td class="ajustar" > <center><h6><?php echo $row['movil_clien']; ?></h6> </center></td>
+			 <td class="ajustar1"> <center><h6><?php echo $row['suc_cliente']; ?> </h6></center></td>
 			 <td class="ajustar1" > <center><h6><?php echo $row['dir_clien']; ?></h6> </center></td>
-			 <div style="overflow: auto" > <td class="ajustar" > <center><h6><?php echo $row['obs_clien']; ?> </h6></center></td> </div>
-			<td> <center><h6><?php echo $row['Envio_info_Clien']; ?> </h6></center></td>  
+			 <div style="overflow: auto" > <td class="ajustar1" > <center><h6><?php echo $row['obs_clien']; ?> </h6></center></td> </div>
+			<td > <center><h6><?php echo $row['Envio_info_Clien']; ?> </h6></center></td>  
 			 
 			 <!--<th> <a class="btn btn-primary btn-lg1" role="main" style="background: Silver;" href="modificando.php?cod_articulo=<?php echo $row['cod_articulo']; ?>">Modificar este Articulo</a> -->		 
 			 <!-- <br></br><a href="Eliminando.php?cod_articulo=<?php echo $row['cod_articulo']; ?>" >Eliminar este Articulo</a> </th> -->
