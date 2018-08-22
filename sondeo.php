@@ -90,7 +90,7 @@ ${demo.css}
 									<li>
 										<a href="#" class="fh5co-sub-ddown">Nuevos Productos ... &nbsp <br></a>
 										<ul class="fh5co-sub-menu">
-											<li class="active"><a href="Sondeo.php">Sondeo</a></li>
+											<li class="active"><a href="Sondeo.php">Sondeeo</a></li>
 											<li  ><a href="son.php">Resultados</a></li>
 										</ul>
 									</li>
